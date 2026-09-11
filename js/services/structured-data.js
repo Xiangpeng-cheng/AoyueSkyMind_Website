@@ -19,7 +19,7 @@ export function injectStructuredData() {
     name: company.name,
     alternateName: company.brand,
     url: location.origin + location.pathname,
-    logo: url + 'assets/svg/logo_blue.svg',
+    logo: url + 'assets/svg/Aoyue_logo_icon_blue.svg',
     contactPoint: [{
       '@type': 'ContactPoint',
       contactType: 'sales',

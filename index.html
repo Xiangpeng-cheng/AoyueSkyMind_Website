@@ -36,8 +36,8 @@
   <link rel="canonical" href="./" />
 
   <!-- 图标 -->
-  <link rel="icon" type="image/svg+xml" href="assets/svg/logo_blue.svg" />
-  <link rel="apple-touch-icon" href="assets/svg/logo_blue.svg" />
+  <link rel="icon" type="image/svg+xml" href="assets/svg/Aoyue_logo_icon_blue.svg" />
+  <link rel="apple-touch-icon" href="assets/svg/Aoyue_logo_icon_blue.svg" />
 
   <!-- 性能：预连接 / preload -->
   <link rel="preload" as="image" href="assets/svg/hero.svg" fetchpriority="high" />
@@ -361,7 +361,7 @@ section { position: relative; }
   <header class="nav" id="nav" role="banner">
     <div class="container-x nav-inner">
       <a class="brand" href="#home" aria-label="武汉翱越智控 首页">
-        <img src="assets/svg/logo_blue.svg" alt="" width="120" height="120" />
+        <img src="assets/svg/Aoyue_logo_icon_blue.svg" alt="" width="120" height="120" />
         <span>
           <span class="brand-name">武汉翱越智控</span><br />
           <span class="brand-sub">Aoyue SkyMind</span>
@@ -416,23 +416,18 @@ section { position: relative; }
           </p>
           <div class="actions">
             <a class="btn btn-primary" href="#solutions">查看解决方案
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
             </a>
             <a class="btn btn-ghost" href="pages/products.html">弹射四旋翼</a>
           </div>
-          <dl class="hero-stats" aria-label="方案概览">
-            <div><dt>核心平台</dt><dd>弹射四旋翼</dd></div>
-            <div><dt>交付方式</dt><dd>场景定制</dd></div>
-            <div><dt>服务范围</dt><dd>巡检 · 侦察 · 勘察</dd></div>
-          </dl>
         </div>
         <div class="hero-visual reveal">
           <div class="frame">
-            <img src="assets/svg/hero.svg" alt="Aoyue SkyMind 工业无人机平台示意" width="800" height="600" fetchpriority="high" />
+            <img src="assets/svg/hero.svg" alt="弹射四旋翼作业平台示意" width="1200" height="900" fetchpriority="high" />
             <div class="badge">
               <div>
-                <p style="font-size:11px;letter-spacing:.4em;color:var(--brand-cyan);margin:0;text-transform:uppercase">Catapult Quadcopter</p>
-                <p style="font-family:Manrope;font-size:18px;color:#fff;margin:4px 0 0">弹射四旋翼作业平台</p>
+                <p style="font-size:12px;letter-spacing:.35em;color:var(--brand-cyan);margin:0;text-transform:uppercase">Catapult Quadcopter</p>
+                <p style="font-size:22px;color:#fff;margin:6px 0 0;font-weight:600">弹射四旋翼作业平台</p>
               </div>
               <a class="btn btn-outline" href="#solutions">查看方案</a>
             </div>
@@ -449,6 +444,11 @@ section { position: relative; }
           </div>
         </div>
       </div>
+      <dl class="hero-stats" aria-label="方案概览">
+        <div><dt>核心平台</dt><dd>弹射四旋翼</dd></div>
+        <div><dt>交付方式</dt><dd>场景定制</dd></div>
+        <div><dt>服务范围</dt><dd>巡检 · 侦察 · 勘察</dd></div>
+      </dl>
     </section>
 
     <!-- 合作伙伴（marquee 内容由 JS 注入） -->
@@ -537,98 +537,26 @@ section { position: relative; }
       <div class="container-x">
         <div class="section-title reveal">
           <span class="eyebrow"><span class="dot"></span>Contact Us</span>
-          <h2>联系我们 <span style="color:var(--haze-400)">/ Let’s Build the Future of Low Altitude</span></h2>
-          <p>请留下您的需求与场景描述，我们的工程师将在 24 小时内与您联系，提供专属方案建议。</p>
+          <h2>联系我们 <span style="color:var(--haze-400)">/ 直接来信即可</span></h2>
+          <p>无需填写表单。通过邮箱与我们联系，说明作业场景即可。</p>
         </div>
 
-        <div class="contact-grid">
-          <form class="contact-form reveal" id="contact-form" novalidate autocomplete="on">
-            <input type="hidden" name="csrf_token" id="csrf_token" />
-            <input type="hidden" name="behavior_score" id="behavior_score" value="0" />
-            <div class="honeypot" aria-hidden="true">
-              <label>请勿填写
-                <input type="text" name="website" tabindex="-1" autocomplete="off" />
-              </label>
-            </div>
-
-            <div class="row two">
-              <label class="field">
-                <span>姓名 <span class="req">*</span></span>
-                <input type="text" name="name" maxlength="40" required placeholder="您的姓名" autocomplete="name" />
-                <span class="field-error">请输入 1-40 个字符的姓名</span>
-              </label>
-              <label class="field">
-                <span>公司 <span class="req">*</span></span>
-                <input type="text" name="company" maxlength="80" required placeholder="所在公司 / 单位" autocomplete="organization" />
-                <span class="field-error">请输入公司名称</span>
-              </label>
-            </div>
-            <div class="row two" style="margin-top:16px">
-              <label class="field">
-                <span>联系电话 <span class="req">*</span></span>
-                <input type="tel" name="phone" maxlength="20" required placeholder="+86 138 0000 0000" autocomplete="tel" inputmode="tel" pattern="^\+?[0-9 \-]{6,20}$" />
-                <span class="field-error">请输入有效的电话号码</span>
-              </label>
-              <label class="field">
-                <span>企业邮箱</span>
-                <input type="email" name="email" maxlength="120" placeholder="name@company.com" autocomplete="email" />
-                <span class="field-error">邮箱格式不正确</span>
-              </label>
-            </div>
-            <div class="row" style="margin-top:16px">
-              <label class="field">
-                <span>关注场景</span>
-                <select name="scene">
-                  <option>电力巡检</option>
-                  <option>测绘建模</option>
-                  <option>应急救援</option>
-                  <option>智慧农业</option>
-                  <option>林业防护</option>
-                  <option>智慧城市</option>
-                  <option>其他</option>
-                </select>
-              </label>
-            </div>
-            <div class="row" style="margin-top:16px">
-              <label class="field">
-                <span>需求描述 <span class="req">*</span></span>
-                <textarea name="message" rows="5" maxlength="2000" required placeholder="请描述作业场景、规模、关键指标与时间计划，以便我们提供更具针对性的方案"></textarea>
-                <span class="field-error">请输入 10-2000 个字符的需求描述</span>
-              </label>
-            </div>
-
-            <div class="captcha" style="margin-top:16px" aria-label="安全验证">
-              <span class="q" id="captcha-q">请计算 1 + 1 = ?</span>
-              <input type="text" name="captcha" id="captcha-input" inputmode="numeric" autocomplete="off" maxlength="4" required aria-label="验证码答案" />
-            </div>
-
-            <div class="actions" style="margin-top:24px;justify-content:space-between">
-              <span style="font-size:12px;color:#6b7180">提交即表示同意我们将所填信息用于方案沟通。</span>
-              <button class="btn btn-primary" type="submit" id="submit-btn">
-                <span id="submit-text">提交需求</span>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-              </button>
-            </div>
-            <div class="throttle-banner" id="throttle-banner">操作过于频繁，请稍后再试。</div>
-            <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
-          </form>
-
-          <aside class="reveal" style="display:flex;flex-direction:column;gap:24px">
-            <div class="card" style="padding:28px">
-              <h5 style="font-size:11px;letter-spacing:.4em;color:#6b7180;text-transform:uppercase;margin:0 0 16px">联系方式</h5>
-              <ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;color:#fff;font-size:14px">
-                <li>邮箱：contact@aoyue-uav.com</li>
-                <li>官网：当前页面</li>
-                <li>工作时间：周一至周五 09:00 - 18:00</li>
-              </ul>
-            </div>
-            <div class="card" style="padding:28px">
-              <h5 style="font-size:11px;letter-spacing:.4em;color:#6b7180;text-transform:uppercase;margin:0 0 16px">服务支持</h5>
-              <p style="font-size:13px;color:var(--haze-300);line-height:1.7;margin:0">
-                产品手册、调参软件、固件升级与技术白皮书，请通过联系表单或邮箱获取最新下载链接。
-              </p>
-            </div>
-          </aside>
+        <div class="contact-directory reveal">
+          <a class="contact-hit" href="mailto:contact@aoyue-uav.com">
+            <span class="k">官方邮箱</span>
+            <span class="v">contact@aoyue-uav.com</span>
+            <span class="hint">点击即可撰写邮件</span>
+          </a>
+          <div class="contact-hit">
+            <span class="k">公司</span>
+            <span class="v">武汉翱越智控科技有限公司</span>
+            <span class="hint">Aoyue SkyMind</span>
+          </div>
+          <div class="contact-hit">
+            <span class="k">工作时间</span>
+            <span class="v">周一至周五 09:00 – 18:00</span>
+            <span class="hint">工作日处理来信</span>
+          </div>
         </div>
       </div>
     </section>
@@ -640,7 +568,7 @@ section { position: relative; }
     <div class="container-x footer-grid">
       <div>
         <div class="brand">
-          <img src="assets/svg/logo_blue.svg" alt="" width="144" height="144" loading="lazy" />
+          <img src="assets/svg/Aoyue_logo_blue.svg" alt="武汉翱越智控" width="280" height="100" loading="lazy" class="brand-wordmark" />
           <span>
             <span class="brand-name" style="font-size:16px">武汉翱越智控科技有限公司</span><br />
             <span class="brand-sub">Aoyue SkyMind · Industrial UAV</span>
@@ -673,16 +601,6 @@ section { position: relative; }
           <li><a href="pages/products.html">产品</a></li>
         </ul>
       </div>
-    </div>
-    <div class="container-x subscribe-box">
-      <div>
-        <h3 style="font-family:Manrope;font-size:22px;color:#fff;margin:0">订阅翱越智控 · 行业洞察</h3>
-        <p style="margin:8px 0 0;color:var(--haze-300);font-size:14px">第一时间获取产品发布、解决方案与技术白皮书信息。</p>
-      </div>
-      <form class="subscribe-form" id="subscribe-form" novalidate>
-        <input type="email" name="email" placeholder="输入您的企业邮箱" required maxlength="120" autocomplete="email" aria-label="订阅邮箱" />
-        <button class="btn btn-primary" type="submit" id="subscribe-btn">立即订阅</button>
-      </form>
     </div>
     <div class="container-x footer-bottom">
       <span>© <span id="year"></span> 武汉翱越智控科技有限公司 · Aoyue SkyMind. 保留所有权利。</span>
