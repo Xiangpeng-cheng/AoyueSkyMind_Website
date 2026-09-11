@@ -1,0 +1,700 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=5" />
+  <meta name="theme-color" content="#050608" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self';
+                 img-src 'self' data: blob:;
+                 style-src 'self' 'unsafe-inline';
+                 font-src 'self' data:;
+                 script-src 'self';
+                 connect-src 'self';
+                 frame-ancestors 'none';
+                 base-uri 'self';
+                 form-action 'self';
+                 object-src 'none';
+                 upgrade-insecure-requests" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="Permissions-Policy"
+        content="accelerometer=(),camera=(),geolocation=(),gyroscope=(),microphone=(),payment=(),usb=()" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+
+  <title>联系我们 · 武汉翱越智控科技有限公司</title>
+  <meta name="description" content="联系武汉翱越智控科技有限公司：通过官方邮箱 contact@aoyue-uav.com 或在线需求表单与我们沟通，获取工业无人机、智能飞控与行业方案的咨询、采购、合作与售后支持。" />
+  <meta name="keywords" content="武汉翱越智控联系方式, 工业无人机咨询, 飞控采购, 商务合作, 售后服务, 技术支持" />
+  <meta name="author" content="武汉翱越智控科技有限公司" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="contact.html" />
+
+  <link rel="icon" type="image/svg+xml" href="../assets/svg/logo_blue.svg" />
+  <link rel="apple-touch-icon" href="../assets/svg/logo_blue.svg" />
+
+  <style>
+/* ---------- tokens ---------- */
+:root {
+  --ink-900: #050608; --ink-800: #0a0c10; --ink-700: #11141a; --ink-600: #1a1e27; --ink-500: #262b36;
+  --haze-100: #f5f7fa; --haze-200: #e1e5ec; --haze-300: #a8aebd; --haze-400: #6b7180; --haze-500: #3a3f4a;
+  --brand-cyan: #00d4ff; --brand-blue: #0a84ff; --brand-violet: #5e5ce6;
+  --font-display: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'HarmonyOS Sans SC', 'Microsoft YaHei', '微软雅黑', sans-serif;
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang SC', 'HarmonyOS Sans SC', 'Microsoft YaHei', '微软雅黑', 'Noto Sans SC', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  --radius-sm: 8px; --radius-md: 16px; --radius-lg: 24px; --radius-xl: 28px; --radius-pill: 999px;
+  --shadow-card: 0 20px 40px -20px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 30px 80px -20px rgba(0, 212, 255, 0.45);
+  --container-max: 1280px; --container-pad-mobile: 24px; --container-pad-desktop: 40px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); --dur-fast: 0.2s; --dur-base: 0.3s;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { color-scheme: dark; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { background: var(--ink-900); color: var(--haze-100); font-family: var(--font-sans); font-size: 15px; line-height: 1.75; letter-spacing: 0.01em; text-rendering: optimizeLegibility; font-feature-settings: "kern" 1, "palt" 1; font-variant-numeric: tabular-nums; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overflow-x: hidden; padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); }
+* { -webkit-tap-highlight-color: transparent; }
+button, a, input, textarea, select { touch-action: manipulation; }
+:lang(zh) { font-feature-settings: "palt" 1; }
+a { color: inherit; text-decoration: none; }
+img, svg { max-width: 100%; display: block; background: var(--ink-700); }
+button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; padding: 0; }
+input, textarea, select { font: inherit; color: inherit; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+:focus-visible { outline: 2px solid var(--brand-cyan); outline-offset: 2px; border-radius: 6px; }
+::selection { background: rgba(0, 212, 255, 0.35); color: #fff; }
+h1, h2, h3, h4, h5 { font-family: var(--font-display); font-weight: 600; letter-spacing: 0; line-height: 1.3; margin: 0; color: var(--haze-100); }
+p { margin: 0; }
+.skip-link { position: absolute; left: -9999px; top: 0; background: var(--brand-cyan); color: var(--ink-900); padding: 8px 14px; border-radius: 0 0 var(--radius-sm) 0; z-index: 100; font-weight: 600; }
+.skip-link:focus { left: 0; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; } }
+
+/* ---------- layout ---------- */
+.container-x { max-width: var(--container-max); margin: 0 auto; padding: 0 var(--container-pad-mobile); }
+@media (min-width: 1024px) { .container-x { padding: 0 var(--container-pad-desktop); } }
+.nav { position: fixed; inset: 0 0 auto 0; z-index: 50; transition: background var(--dur-base) var(--ease-out), backdrop-filter var(--dur-base) var(--ease-out); background: transparent; }
+.nav.scrolled { background: rgba(5, 6, 8, 0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; height: 80px; transition: height var(--dur-base) var(--ease-out); }
+.nav.scrolled .nav-inner { height: 56px; }
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand img { width: 120px; height: 120px; border-radius: var(--radius-sm); transition: all var(--dur-base) var(--ease-out); background: transparent; }
+.nav.scrolled .brand img { width: 96px; height: 96px; }
+.brand-name { font-family: var(--font-display); font-size: 14px; font-weight: 600; letter-spacing: 0.02em; }
+.brand-sub { font-size: 11px; letter-spacing: 0.3em; color: var(--haze-300); text-transform: uppercase; }
+.nav-links { display: none; gap: 36px; }
+@media (min-width: 1024px) { .nav-links { display: flex; } }
+.nav-link { position: relative; font-size: 13.5px; font-weight: 500; color: rgba(255, 255, 255, 0.75); transition: color var(--dur-fast) var(--ease-out); padding: 6px 0; }
+.nav-link:hover, .nav-link.active { color: #fff; }
+.nav-link::after { content: ''; position: absolute; left: 50%; bottom: -6px; width: 0; height: 1px; background: linear-gradient(90deg, var(--brand-cyan), var(--brand-violet)); transform: translateX(-50%); transition: width var(--dur-base) var(--ease-out); }
+.nav-link:hover::after, .nav-link.active::after { width: 24px; }
+.nav-cta { display: none; gap: 12px; }
+@media (min-width: 1024px) { .nav-cta { display: flex; } }
+.burger { display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(255, 255, 255, 0.15); border-radius: var(--radius-pill); width: 36px; height: 36px; color: #fff; }
+@media (min-width: 1024px) { .burger { display: none; } }
+.mobile-panel { display: none; position: fixed; top: 80px; left: 0; right: 0; z-index: 40; padding: 0 16px; }
+.mobile-panel.open { display: block; }
+.mobile-panel .panel { background: rgba(17, 20, 26, 0.95); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 20px; padding: 12px; display: flex; flex-direction: column; gap: 4px; }
+.mobile-panel a { padding: 12px 14px; border-radius: 14px; font-size: 14px; font-weight: 500; color: rgba(255, 255, 255, 0.85); }
+.mobile-panel a.active, .mobile-panel a:hover { background: rgba(255, 255, 255, 0.08); color: #fff; }
+.mobile-panel .grid-cta { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 6px; padding: 0 4px 4px; }
+
+/* ---------- components ---------- */
+.btn { display: inline-flex; align-items: center; gap: 8px; border-radius: var(--radius-pill); padding: 10px 20px; font-size: 13px; font-weight: 500; transition: all var(--dur-base) var(--ease-out); white-space: nowrap; border: 1px solid transparent; text-decoration: none; }
+.btn-primary { background: #fff; color: var(--ink-900); }
+.btn-primary:hover { background: var(--brand-cyan); box-shadow: var(--shadow-glow); }
+.btn-ghost { border-color: rgba(255, 255, 255, 0.2); color: var(--haze-100); }
+.btn-ghost:hover { border-color: var(--brand-cyan); color: #fff; background: rgba(0, 212, 255, 0.05); }
+.btn-outline { border-color: rgba(255, 255, 255, 0.3); color: var(--haze-100); }
+.btn-outline:hover { background: rgba(255, 255, 255, 0.08); }
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px; border-radius: var(--radius-pill); border: 1px solid rgba(255, 255, 255, 0.15); font-size: 11px; letter-spacing: 0.4em; color: var(--haze-300); text-transform: uppercase; }
+.eyebrow .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--brand-cyan); }
+.card { position: relative; overflow: hidden; border-radius: var(--radius-lg); border: 1px solid rgba(255, 255, 255, 0.08); background: var(--ink-800); transition: all var(--dur-base) var(--ease-out); }
+.card:hover { border-color: rgba(0, 212, 255, 0.5); }
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out); }
+.reveal.in { opacity: 1; transform: none; }
+
+/* 表单组件 */
+.field { display: flex; flex-direction: column; gap: 6px; font-size: 13px; color: var(--haze-300); }
+.field input, .field textarea, .field select { background: rgba(5, 6, 8, 0.8); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-md); padding: 12px 16px; color: #fff; font-size: 14px; width: 100%; }
+.field input::placeholder, .field textarea::placeholder { color: var(--haze-400); }
+.field input:focus, .field textarea:focus, .field select:focus { border-color: var(--brand-cyan); outline: none; }
+.field .req { color: var(--brand-cyan); }
+.field-error { color: #ff7a7a; font-size: 12px; display: none; }
+.field.invalid .field-error { display: block; }
+.field.invalid input, .field.invalid textarea { border-color: #ff7a7a; }
+.honeypot { position: absolute; left: -9999px; top: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.captcha { display: flex; align-items: center; gap: 12px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-md); padding: 14px 16px; }
+.captcha .q { font-size: 14px; color: #fff; flex: 1; }
+.captcha input { width: 96px; background: rgba(5, 6, 8, 0.8); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 10px; padding: 8px 10px; color: #fff; font-size: 14px; text-align: center; }
+.captcha input:focus { border-color: var(--brand-cyan); outline: none; }
+.form-status { margin-top: 16px; font-size: 13px; display: none; }
+.form-status.success { display: block; color: #7cffb2; }
+.form-status.error { display: block; color: #ff7a7a; }
+.throttle-banner { margin-top: 16px; font-size: 12px; color: #ffb46b; display: none; }
+
+/* 订阅表单 */
+.subscribe-form { display: flex; flex-direction: column; gap: 12px; }
+@media (min-width: 480px) { .subscribe-form { flex-direction: row; } }
+.subscribe-form input { flex: 1; background: rgba(5, 6, 8, 0.8); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: var(--radius-pill); padding: 12px 20px; color: #fff; font-size: 14px; min-width: 0; }
+.subscribe-form input::placeholder { color: var(--haze-400); }
+.subscribe-form input:focus { border-color: var(--brand-cyan); outline: none; }
+
+/* ---------- 页面级样式（联系我们专属） ---------- */
+section { position: relative; }
+.page-hero { position: relative; overflow: hidden; padding: 200px 0 80px; }
+@media (min-width: 768px) { .page-hero { padding: 220px 0 100px; } }
+.page-hero .aurora { position: absolute; inset: 0; background: radial-gradient(60% 60% at 20% 30%, rgba(0, 212, 255, 0.30) 0%, transparent 60%), radial-gradient(50% 50% at 80% 20%, rgba(94, 92, 230, 0.30) 0%, transparent 60%); z-index: -2; }
+.page-hero .grain { position: absolute; inset: 0; z-index: -1; opacity: 0.4; mix-blend-mode: overlay; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>"); }
+.page-hero h1 { font-size: clamp(36px, 5.5vw, 64px); line-height: 1.06; margin: 24px 0 0; }
+.page-hero h1 .grad { background: linear-gradient(135deg, #fff 0%, #a8aebd 60%, #00d4ff 120%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.page-hero p.lead { font-size: 17px; line-height: 1.75; color: #a8aebd; max-width: 720px; margin: 24px 0 0; }
+
+/* 通用内容 section */
+.contact-section { padding: 80px 0; border-top: 1px solid rgba(255, 255, 255, 0.05); }
+.contact-section:nth-child(even) { background: rgba(10, 12, 16, 0.5); }
+.section-eyebrow { font-size: 11px; letter-spacing: 0.4em; color: var(--brand-cyan); text-transform: uppercase; }
+.contact-section h2 { font-size: clamp(28px, 4vw, 44px); line-height: 1.15; margin: 12px 0 24px; }
+.contact-section .intro { font-size: 15px; line-height: 1.85; color: var(--haze-300); max-width: 760px; margin: 0 0 40px; }
+
+/* 联系表单布局 */
+.contact-grid { display: grid; gap: 40px; margin-top: 0; }
+@media (min-width: 1024px) { .contact-grid { grid-template-columns: 1.2fr 1fr; } }
+.contact-form { position: relative; overflow: hidden; border-radius: var(--radius-lg); border: 1px solid rgba(255, 255, 255, 0.08); background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); padding: 32px; }
+.contact-form::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(0, 212, 255, 0.1), transparent 40%, rgba(94, 92, 230, 0.1)); z-index: -1; pointer-events: none; }
+.contact-form .row { display: grid; gap: 16px; }
+@media (min-width: 480px) { .contact-form .row.two { grid-template-columns: 1fr 1fr; } }
+.contact-form .actions { margin-top: 24px; display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; }
+
+/* 联系方式侧栏 */
+.contact-aside { display: flex; flex-direction: column; gap: 24px; }
+.aside-card { padding: 28px; border-radius: var(--radius-lg); border: 1px solid rgba(255, 255, 255, 0.08); background: var(--ink-800); }
+.aside-card h5 { font-size: 11px; letter-spacing: 0.4em; color: var(--haze-400); text-transform: uppercase; margin: 0 0 16px; font-weight: 600; }
+.aside-card ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 14px; color: #fff; font-size: 14px; }
+.aside-card p { font-size: 13px; color: var(--haze-300); line-height: 1.7; margin: 0; }
+.aside-card .kv { display: flex; justify-content: space-between; gap: 16px; padding: 8px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); font-size: 13px; }
+.aside-card .kv:last-child { border-bottom: none; }
+.aside-card .kv .k { color: var(--haze-400); letter-spacing: 0.1em; }
+.aside-card .kv .v { color: #fff; font-family: var(--font-display); }
+
+/* 联系方式卡片网格 */
+.contact-cards { display: grid; gap: 20px; }
+@media (min-width: 640px) { .contact-cards { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .contact-cards { grid-template-columns: repeat(3, 1fr); } }
+.contact-card { padding: 28px; border-radius: var(--radius-lg); border: 1px solid rgba(255, 255, 255, 0.08); background: var(--ink-800); transition: all var(--dur-base) var(--ease-out); }
+.contact-card:hover { border-color: rgba(0, 212, 255, 0.5); transform: translateY(-2px); }
+.contact-card .icon { width: 44px; height: 44px; border-radius: var(--radius-md); background: linear-gradient(135deg, rgba(0, 212, 255, 0.12), rgba(94, 92, 230, 0.12)); border: 1px solid rgba(255, 255, 255, 0.08); display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--brand-cyan); margin-bottom: 20px; }
+.contact-card h4 { font-size: 16px; margin: 0 0 8px; }
+.contact-card p { font-size: 13px; line-height: 1.7; color: var(--haze-300); margin: 0; }
+.contact-card .value { display: block; margin-top: 16px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.06); font-family: var(--font-display); font-size: 15px; color: #fff; word-break: break-all; }
+
+/* 合作类型网格 */
+.partnership-grid { display: grid; gap: 16px; }
+@media (min-width: 640px) { .partnership-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .partnership-grid { grid-template-columns: repeat(4, 1fr); } }
+.partnership-card { padding: 24px; border-radius: var(--radius-lg); border: 1px solid rgba(255, 255, 255, 0.06); background: rgba(255, 255, 255, 0.02); transition: all var(--dur-base) var(--ease-out); }
+.partnership-card:hover { border-color: rgba(0, 212, 255, 0.4); background: rgba(0, 212, 255, 0.03); }
+.partnership-card .tag { display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: var(--radius-pill); background: rgba(0, 212, 255, 0.08); color: var(--brand-cyan); font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 16px; }
+.partnership-card h4 { font-size: 15px; margin: 0 0 10px; }
+.partnership-card p { font-size: 13px; line-height: 1.7; color: var(--haze-300); margin: 0; }
+
+/* FAQ 折叠 */
+.faq-list { display: flex; flex-direction: column; gap: 12px; }
+.faq-item { border-radius: var(--radius-md); border: 1px solid rgba(255, 255, 255, 0.08); background: var(--ink-800); overflow: hidden; }
+.faq-item summary { padding: 20px 24px; cursor: pointer; font-family: var(--font-display); font-size: 15px; font-weight: 500; color: #fff; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; transition: background var(--dur-fast) var(--ease-out); }
+.faq-item summary:hover { background: rgba(255, 255, 255, 0.03); }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: '+'; font-size: 22px; color: var(--brand-cyan); font-weight: 300; transition: transform var(--dur-base) var(--ease-out); }
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item .faq-answer { padding: 0 24px 20px; font-size: 14px; line-height: 1.8; color: var(--haze-300); }
+
+/* 订阅区块 */
+.subscribe-box { margin-top: 64px; border-radius: var(--radius-lg); border: 1px solid rgba(255, 255, 255, 0.05); background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), transparent); padding: 32px; display: grid; gap: 24px; }
+@media (min-width: 1024px) { .subscribe-box { grid-template-columns: 1.2fr 1fr; align-items: center; } }
+
+/* 页脚 */
+.footer { margin-top: 80px; background: var(--ink-800); border-top: 1px solid rgba(255, 255, 255, 0.05); position: relative; }
+.footer::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.4), transparent); }
+.footer-grid { display: grid; gap: 48px; padding: 64px 0; }
+@media (min-width: 1024px) { .footer-grid { grid-template-columns: 1.4fr repeat(3, 1fr); } }
+.footer h5 { font-size: 11px; letter-spacing: 0.35em; color: var(--haze-400); text-transform: uppercase; margin: 0 0 20px; font-weight: 600; }
+.footer ul { display: flex; flex-direction: column; gap: 12px; }
+.footer ul a { color: rgba(255, 255, 255, 0.85); font-size: 14px; transition: color var(--dur-fast) var(--ease-out); display: inline-flex; align-items: center; gap: 6px; }
+.footer ul a:hover { color: #fff; }
+.footer-bottom { margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.05); font-size: 12px; color: var(--haze-400); display: flex; flex-direction: column; gap: 12px; }
+@media (min-width: 768px) { .footer-bottom { flex-direction: row; align-items: center; justify-content: space-between; } }
+
+/* ============================================================
+   响应式增强：超小屏（<480px）+ 触摸优化 + 横屏适配
+   ============================================================ */
+@media (max-width: 479px) {
+  :root { --container-pad-mobile: 16px; }
+  .nav-inner { height: 64px; }
+  .nav.scrolled .nav-inner { height: 52px; }
+  .mobile-panel { top: 64px; }
+  .footer-grid { padding: 40px 0; gap: 32px; }
+  .subscribe-box { padding: 20px; }
+  .hero { padding: 130px 0 70px; }
+  .hero h1 { font-size: clamp(28px, 8vw, 36px); line-height: 1.1; }
+  .hero p.lead { font-size: 14.5px; line-height: 1.7; }
+  .hero-stats { gap: 16px; padding-top: 24px; }
+  .hero-stats dd { font-size: 22px; }
+  .section-title h2 { font-size: clamp(24px, 6vw, 32px); }
+  .product-card {
+    flex: 0 0 88vw;
+    height: auto;
+    min-height: 420px;
+  }
+  .product-card .body { padding: 18px; }
+  .contact-form { padding: 20px; }
+  .captcha { flex-direction: column; align-items: stretch; gap: 8px; }
+  .captcha input { width: 100%; }
+  .field input, .field textarea, .field select { padding: 12px 14px; font-size: 16px; }
+  /* 移动端 logo 保持 80px 不致破版 */
+  .brand img { width: 80px; height: 80px; }
+  .nav.scrolled .brand img { width: 64px; height: 64px; }
+}
+@media (hover: none) and (pointer: coarse) {
+  .btn { min-height: 44px; }
+  .nav-link { padding: 12px 4px; }
+  .mobile-panel a { min-height: 44px; }
+  .card:hover .card-media img { transform: none; }
+  .product-card:hover .media img { transform: none; }
+}
+@media (orientation: landscape) and (max-height: 500px) {
+  .nav-inner { height: 56px; }
+}
+  </style>
+
+  <!-- JSON-LD（由 services/structured-data.js 安全注入） -->
+  <script type="application/ld+json" id="ld-company"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="nav" id="nav" role="banner">
+    <div class="container-x nav-inner">
+      <a class="brand" href="../index.html" aria-label="武汉翱越智控 首页">
+        <img src="../assets/svg/logo_blue.svg" alt="" width="120" height="120" />
+        <span>
+          <span class="brand-name">武汉翱越智控</span><br />
+          <span class="brand-sub">Aoyue SkyMind</span>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="主导航">
+        <a class="nav-link" href="../index.html" data-nav>首页</a>
+        <a class="nav-link" href="products.html" data-nav>产品中心</a>
+        <a class="nav-link" href="solutions.html" data-nav>行业方案</a>
+        <a class="nav-link" href="payloads.html" data-nav>飞控与载荷</a>
+        <a class="nav-link" href="about.html" data-nav>关于我们</a>
+        <a class="nav-link active" href="contact.html" data-nav aria-current="page">联系我们</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn-ghost" href="#consult">商务合作</a>
+        <a class="btn btn-primary" href="#consult">咨询采购</a>
+      </div>
+      <button class="burger" type="button" id="burger" aria-label="切换菜单" aria-expanded="false" aria-controls="mobile-panel">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      </button>
+    </div>
+    <div class="mobile-panel" id="mobile-panel">
+      <div class="panel">
+        <a href="../index.html" data-nav>首页</a>
+        <a href="products.html" data-nav>产品中心</a>
+        <a href="solutions.html" data-nav>行业方案</a>
+        <a href="payloads.html" data-nav>飞控与载荷</a>
+        <a href="about.html" data-nav>关于我们</a>
+        <a class="active" href="contact.html" data-nav>联系我们</a>
+        <div class="grid-cta">
+          <a class="btn btn-ghost" href="#consult">商务合作</a>
+          <a class="btn btn-primary" href="#consult">咨询采购</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- 页面 Hero -->
+    <section class="page-hero" aria-label="联系我们主视觉">
+      <div class="aurora" aria-hidden="true"></div>
+      <div class="grain" aria-hidden="true"></div>
+      <div class="container-x">
+        <div class="reveal">
+          <span class="eyebrow"><span class="dot"></span>Contact Us</span>
+          <h1>
+            <span class="grad">与我们对话</span><br />
+            共建低空生产力的未来
+          </h1>
+          <p class="lead">
+            无论您希望了解产品、采购整机、寻求行业方案，还是探索生态合作，我们都欢迎您通过表单或邮箱与我们沟通。
+            请留下您的需求与场景描述，我们的工程师将在 24 小时内与您联系，提供专属方案建议。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 联系方式卡片 -->
+    <section class="contact-section" id="channels" aria-label="联系方式">
+      <div class="container-x">
+        <div class="reveal">
+          <span class="section-eyebrow">Contact Channels</span>
+          <h2>多渠道沟通</h2>
+          <p class="intro">
+            我们提供邮箱、在线表单与商务热线等多种沟通方式，覆盖售前咨询、采购对接、技术支持与生态合作的全场景需求，
+            您可根据事项紧急程度与对接阶段选择最合适的渠道。
+          </p>
+        </div>
+        <div class="contact-cards">
+          <div class="contact-card reveal">
+            <div class="icon">邮</div>
+            <h4>官方邮箱</h4>
+            <p>面向商务合作、产品咨询与生态对接的统一入口，工作日内逐件回复。</p>
+            <span class="value">contact@aoyue-uav.com</span>
+          </div>
+          <div class="contact-card reveal">
+            <div class="icon">表</div>
+            <h4>在线需求表单</h4>
+            <p>结构化描述作业场景与关键指标，便于工程师快速理解需求并提供针对性方案。</p>
+            <span class="value"><a href="#consult">前往需求表单 ↓</a></span>
+          </div>
+          <div class="contact-card reveal">
+            <div class="icon">时</div>
+            <h4>响应时间</h4>
+            <p>收到您的需求后，我们的工程师将在 24 小时内主动与您联系并启动对接流程。</p>
+            <span class="value">≤ 24 小时响应</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 咨询表单 -->
+    <section class="contact-section" id="consult" aria-label="在线需求表单">
+      <div class="container-x">
+        <div class="reveal">
+          <span class="section-eyebrow">Requirement Form</span>
+          <h2>提交您的需求</h2>
+          <p class="intro">
+            请尽可能详细地描述作业场景、规模、关键指标与时间计划，这将帮助我们更精准地匹配产品与方案。
+            带星号（<span style="color:var(--brand-cyan)">*</span>）的字段为必填项。
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <form class="contact-form reveal" id="contact-form" novalidate autocomplete="on">
+            <input type="hidden" name="csrf_token" id="csrf_token" />
+            <input type="hidden" name="behavior_score" id="behavior_score" value="0" />
+            <div class="honeypot" aria-hidden="true">
+              <label>请勿填写
+                <input type="text" name="website" tabindex="-1" autocomplete="off" />
+              </label>
+            </div>
+
+            <div class="row two">
+              <label class="field">
+                <span>姓名 <span class="req">*</span></span>
+                <input type="text" name="name" maxlength="40" required placeholder="您的姓名" autocomplete="name" />
+                <span class="field-error">请输入 1-40 个字符的姓名</span>
+              </label>
+              <label class="field">
+                <span>公司 <span class="req">*</span></span>
+                <input type="text" name="company" maxlength="80" required placeholder="所在公司 / 单位" autocomplete="organization" />
+                <span class="field-error">请输入公司名称</span>
+              </label>
+            </div>
+            <div class="row two" style="margin-top:16px">
+              <label class="field">
+                <span>联系电话 <span class="req">*</span></span>
+                <input type="tel" name="phone" maxlength="20" required placeholder="+86 138 0000 0000" autocomplete="tel" inputmode="tel" pattern="^\+?[0-9 \-]{6,20}$" />
+                <span class="field-error">请输入有效的电话号码</span>
+              </label>
+              <label class="field">
+                <span>企业邮箱</span>
+                <input type="email" name="email" maxlength="120" placeholder="name@company.com" autocomplete="email" />
+                <span class="field-error">邮箱格式不正确</span>
+              </label>
+            </div>
+            <div class="row" style="margin-top:16px">
+              <label class="field">
+                <span>关注场景</span>
+                <select name="scene">
+                  <option>电力巡检</option>
+                  <option>测绘建模</option>
+                  <option>应急救援</option>
+                  <option>智慧农业</option>
+                  <option>林业防护</option>
+                  <option>智慧城市</option>
+                  <option>其他</option>
+                </select>
+              </label>
+            </div>
+            <div class="row" style="margin-top:16px">
+              <label class="field">
+                <span>需求描述 <span class="req">*</span></span>
+                <textarea name="message" rows="5" maxlength="2000" required placeholder="请描述作业场景、规模、关键指标与时间计划，以便我们提供更具针对性的方案"></textarea>
+                <span class="field-error">请输入 10-2000 个字符的需求描述</span>
+              </label>
+            </div>
+
+            <div class="captcha" style="margin-top:16px" aria-label="安全验证">
+              <span class="q" id="captcha-q">请计算 1 + 1 = ?</span>
+              <input type="text" name="captcha" id="captcha-input" inputmode="numeric" autocomplete="off" maxlength="4" required aria-label="验证码答案" />
+            </div>
+
+            <div class="actions">
+              <span style="font-size:12px;color:#6b7180">提交即表示同意我们将所填信息用于方案沟通。</span>
+              <button class="btn btn-primary" type="submit" id="submit-btn">
+                <span id="submit-text">提交需求</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </button>
+            </div>
+            <div class="throttle-banner" id="throttle-banner">操作过于频繁，请稍后再试。</div>
+            <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+          </form>
+
+          <aside class="contact-aside reveal">
+            <div class="aside-card">
+              <h5>联系方式</h5>
+              <ul>
+                <li>邮箱：contact@aoyue-uav.com</li>
+                <li>官网：当前页面</li>
+                <li>工作时间：周一至周五 09:00 - 18:00</li>
+              </ul>
+            </div>
+            <div class="aside-card">
+              <h5>响应承诺</h5>
+              <div class="kv"><span class="k">需求受理</span><span class="v">≤ 24 小时</span></div>
+              <div class="kv"><span class="k">方案初稿</span><span class="v">≤ 3 个工作日</span></div>
+              <div class="kv"><span class="k">技术答疑</span><span class="v">工作日实时</span></div>
+              <div class="kv"><span class="k">售后支持</span><span class="v">整机生命周期</span></div>
+            </div>
+            <div class="aside-card">
+              <h5>服务支持</h5>
+              <p>
+                产品手册、调参软件、固件升级与技术白皮书，请通过联系表单或邮箱获取最新下载链接。
+              </p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- 合作类型 -->
+    <section class="contact-section" id="partnership" aria-label="合作类型">
+      <div class="container-x">
+        <div class="reveal">
+          <span class="section-eyebrow">Partnership</span>
+          <h2>合作类型</h2>
+          <p class="intro">
+            我们为不同类型的合作伙伴提供差异化的对接流程与支持政策，
+            无论您是终端行业用户、系统集成商、科研院所还是渠道分销商，均可找到合适的合作模式。
+          </p>
+        </div>
+        <div class="partnership-grid">
+          <div class="partnership-card reveal">
+            <span class="tag">End User</span>
+            <h4>行业终端用户</h4>
+            <p>面向电力、测绘、应急、农业、林业与城市治理等行业用户提供产品采购、方案定制与培训服务。</p>
+          </div>
+          <div class="partnership-card reveal">
+            <span class="tag">Integrator</span>
+            <h4>系统集成商</h4>
+            <p>提供飞控、整机、载荷与链路的组合方案，开放 SDK 与 API 支持二次开发与系统级集成。</p>
+          </div>
+          <div class="partnership-card reveal">
+            <span class="tag">Research</span>
+            <h4>科研院所</h4>
+            <p>面向高校与科研机构提供开发版飞控、技术文档与联合研究支持，共同推进前沿技术探索。</p>
+          </div>
+          <div class="partnership-card reveal">
+            <span class="tag">Channel</span>
+            <h4>渠道与分销</h4>
+            <p>欢迎具备行业资源与服务能力的渠道伙伴加入翱越分销网络，共建区域服务能力。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 服务支持 -->
+    <section class="contact-section" id="support" aria-label="服务支持">
+      <div class="container-x">
+        <div class="reveal">
+          <span class="section-eyebrow">Service & Support</span>
+          <h2>服务与支持</h2>
+          <p class="intro">
+            翱越智控为每一位客户提供覆盖整机生命周期的服务支持，
+            从产品培训、固件升级到现场技术支持，确保您在部署与运营过程中的每一环节都能得到及时响应。
+          </p>
+        </div>
+        <div class="contact-cards">
+          <div class="contact-card reveal">
+            <div class="icon">档</div>
+            <h4>产品文档</h4>
+            <p>提供产品手册、技术规格书、操作指南与作业规范，覆盖飞控、整机、载荷与地面站全产品线。</p>
+            <span class="value">通过表单或邮箱申请</span>
+          </div>
+          <div class="contact-card reveal">
+            <div class="icon">固</div>
+            <h4>固件与软件</h4>
+            <p>飞控固件、调参软件与地面站软件的版本更新与下载链接，支持产品全生命周期的功能迭代。</p>
+            <span class="value">通过表单或邮箱申请</span>
+          </div>
+          <div class="contact-card reveal">
+            <div class="icon">训</div>
+            <h4>培训服务</h4>
+            <p>提供产品操作、飞行作业与维护保养的标准化培训课程，支持线上与线下多种交付形式。</p>
+            <span class="value">联系商务定制方案</span>
+          </div>
+          <div class="contact-card reveal">
+            <div class="icon">现</div>
+            <h4>现场支持</h4>
+            <p>面向重大项目与首飞场景提供现场技术支持，协助客户完成首飞验证与作业流程梳理。</p>
+            <span class="value">联系商务预约</span>
+          </div>
+          <div class="contact-card reveal">
+            <div class="icon">保</div>
+            <h4>售后保障</h4>
+            <p>整机产品提供标准质保服务，并支持延保与备件包方案，确保长期作业的连续性。</p>
+            <span class="value">整机生命周期支持</span>
+          </div>
+          <div class="contact-card reveal">
+            <div class="icon">白</div>
+            <h4>技术白皮书</h4>
+            <p>提供飞控架构、链路安全、行业方案等技术白皮书，助力决策与方案论证。</p>
+            <span class="value">通过表单或邮箱申请</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 常见问题 -->
+    <section class="contact-section" id="faq" aria-label="常见问题">
+      <div class="container-x">
+        <div class="reveal">
+          <span class="section-eyebrow">FAQ</span>
+          <h2>常见问题</h2>
+          <p class="intro">
+            以下整理了客户在咨询与合作过程中最常提出的问题，若未覆盖您的疑问，欢迎通过表单或邮箱与我们联系。
+          </p>
+        </div>
+        <div class="faq-list reveal">
+          <details class="faq-item">
+            <summary>如何获取产品报价与方案建议？</summary>
+            <div class="faq-answer">
+              请通过本页面的"在线需求表单"提交作业场景、规模与关键指标，或直接发送邮件至 contact@aoyue-uav.com，
+              我们的工程师将在 24 小时内与您联系，并根据需求提供针对性的产品选型与方案建议。
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>是否支持样机试用或演示？</summary>
+            <div class="faq-answer">
+              面向具备明确采购意向的行业客户与集成商，我们可根据场景评估提供样机试用或现场演示支持，
+              具体安排请通过联系表单说明您的应用场景与时间计划，由商务团队与您对接。
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>SkyMind 飞控是否支持第三方平台适配？</summary>
+            <div class="faq-answer">
+              SkyMind FC-X 飞控提供开放式 SDK 与 API 文档，支持行业用户与集成商进行二次开发与系统集成，
+              亦可适配符合条件的第三方整机平台，具体接口与对接流程请通过表单或邮箱申请获取技术资料。
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>是否提供培训与售后支持？</summary>
+            <div class="faq-answer">
+              是的。我们提供覆盖产品操作、飞行作业与维护保养的标准化培训课程，并为整机产品提供标准质保与延保方案，
+              同时面向重大项目提供现场技术支持，保障客户在部署与运营过程中的连续性。
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>如何加入翱越的渠道与分销网络？</summary>
+            <div class="faq-answer">
+              欢迎具备行业资源与服务能力的渠道伙伴加入翱越分销网络。请通过联系表单说明您所在区域、关注行业与既有资源，
+              商务团队将与您沟通具体的合作模式、政策与支持体系。
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>是否提供定制化行业方案？</summary>
+            <div class="faq-answer">
+              是的。除标准产品矩阵外，我们围绕电力、测绘、应急、农业、林业与城市治理等行业提供定制化方案，
+              包含载荷选型、航线规划、数据治理与 AI 识别能力，请通过表单说明您的具体场景与指标需求。
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- 订阅 -->
+    <section style="padding:96px 0" aria-label="订阅行业洞察">
+      <div class="container-x">
+        <div class="card reveal" style="padding:48px 40px;background:linear-gradient(135deg,rgba(0,212,255,0.06),rgba(94,92,230,0.06))">
+          <div style="display:grid;gap:24px">
+            <div>
+              <span class="eyebrow"><span class="dot"></span>Insights</span>
+              <h3 style="font-family:var(--font-display);font-size:24px;color:#fff;margin:16px 0 0">订阅翱越智控 · 行业洞察</h3>
+              <p style="margin:8px 0 0;color:var(--haze-300);font-size:14px;line-height:1.7">
+                第一时间获取产品发布、解决方案与技术白皮书信息。
+              </p>
+            </div>
+            <form class="subscribe-form" id="subscribe-form" novalidate>
+              <input type="email" name="email" placeholder="输入您的企业邮箱" required maxlength="120" autocomplete="email" aria-label="订阅邮箱" />
+              <button class="btn btn-primary" type="submit" id="subscribe-btn">立即订阅</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container-x footer-grid">
+      <div>
+        <div class="brand">
+          <img src="../assets/svg/logo_blue.svg" alt="" width="144" height="144" loading="lazy" />
+          <span>
+            <span class="brand-name" style="font-size:16px">武汉翱越智控科技有限公司</span><br />
+            <span class="brand-sub">Aoyue SkyMind · Industrial UAV</span>
+          </span>
+        </div>
+        <p style="margin:24px 0 0;max-width:380px;color:var(--haze-300);font-size:14px;line-height:1.7">
+          以智能飞行控制为核心，专注工业无人机整机、飞控载荷与行业数字化解决方案，赋能低空生产力。
+        </p>
+      </div>
+      <div>
+        <h5>产品</h5>
+        <ul>
+          <li><a href="products.html#m500">Aoyue M500</a></li>
+          <li><a href="products.html#x12">Aoyue X12</a></li>
+          <li><a href="products.html#t70">Aoyue T70</a></li>
+          <li><a href="products.html#fcx">SkyMind FC-X</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>解决方案</h5>
+        <ul>
+          <li><a href="solutions.html">电力巡检</a></li>
+          <li><a href="solutions.html">测绘建模</a></li>
+          <li><a href="solutions.html">应急救援</a></li>
+          <li><a href="solutions.html">智慧农业</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>公司</h5>
+        <ul>
+          <li><a href="about.html">关于我们</a></li>
+          <li><a href="contact.html">联系我们</a></li>
+          <li><a href="payloads.html">飞控与载荷</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container-x footer-bottom">
+      <span>© <span id="year"></span> 武汉翱越智控科技有限公司 · Aoyue SkyMind. 保留所有权利。</span>
+      <span>网站访问统计与异常请求防护已启用</span>
+    </div>
+  </footer>
+
+  <script defer src="../js/app.bundle.js"></script>
+</body>
+</html>

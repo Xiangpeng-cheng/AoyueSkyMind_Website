@@ -1,0 +1,23 @@
+{
+  "name": "wuhan-aoyue-website",
+  "version": "1.0.0",
+  "description": "武汉翱越智控科技有限公司 官方网站（纯静态、零依赖、模块化）",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "open tests/runner.html",
+    "lint": "eslint js/",
+    "serve": "npx serve -l 8080 .",
+    "docs": "echo 项目无构建步骤；文档见 docs/ 目录"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "aoyue",
+    "uav",
+    "static-site",
+    "es-modules"
+  ],
+  "license": "UNLICENSED"
+}

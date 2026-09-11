@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>单元测试 · Aoyue SkyMind Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; background: #0a0c10; color: #e1e5ec; margin: 0; padding: 32px; }
+    h1 { font-size: 22px; }
+    .summary { margin: 16px 0 24px; padding: 12px 16px; border-radius: 12px; }
+    .summary.pass { background: rgba(124,255,178,.1); color: #7cffb2; }
+    .summary.fail { background: rgba(255,122,122,.1); color: #ff7a7a; }
+    .case { padding: 10px 14px; border-bottom: 1px solid rgba(255,255,255,.05); font-family: ui-monospace, Menlo, monospace; font-size: 13px; }
+    .case .name { color: #fff; }
+    .case .ok { color: #7cffb2; }
+    .case .ko { color: #ff7a7a; }
+    .case pre { margin: 6px 0 0; color: #a8aebd; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h1>单元测试</h1>
+  <div id="summary" class="summary"></div>
+  <div id="results"></div>
+  <script type="module">
+    import { esc, attr, jsonSafe, sanitizeText, stripCtl } from '../js/utils/escape.js';
+    import { isPhone, isEmail, isText, validate } from '../js/security/validator.js';
+    import { randomToken } from '../js/utils/random.js';
+    import { canSubmit, reset } from '../js/security/rate-limiter.js';
+    import { getToken, rotateToken } from '../js/security/csrf.js';
+
+    const cases = [];
+    function test(name, fn) {
+      cases.push({ name, fn });
+    }
+    function assert(cond, msg) {
+      if (!cond) throw new Error(msg || 'assertion failed');
+    }
+    function assertEq(a, b, msg) {
+      if (a !== b) throw new Error((msg || 'assertEq') + ': expected ' + JSON.stringify(b) + ', got ' + JSON.stringify(a));
+    }
+
+    // esc
+    test('esc 转义关键字符', function () {
+      assertEq(esc('<script>alert(1)</script>'),
+        '&lt;script&gt;alert&#x28;1&#x29;&lt;&#x2F;script&gt;');
+    });
+    test('esc 处理 null/undefined', function () {
+      assertEq(esc(null), '');
+      assertEq(esc(undefined), '');
+    });
+    test('attr 去除换行与控制字符', function () {
+      assertEq(attr('a\nb\tc'), 'a b c');
+    });
+    test('jsonSafe 防止 </script 终止', function () {
+      const out = jsonSafe({ x: '</script><script>alert(1)</script>' });
+      assert(out.indexOf('<\\/script') !== -1, '应转义 </script');
+    });
+    test('stripCtl 去除控制字符', function () {
+      assertEq(stripCtl('a\u0000b\u0007c'), 'abc');
+    });
+    test('sanitizeText 限制长度', function () {
+      assertEq(sanitizeText('  hello  ', 10), 'hello');
+      assertEq(sanitizeText('abcdef', 3), 'abc');
+    });
+
+    // validator
+    test('isPhone 通过合法电话', function () {
+      assert(isPhone('+86 138 0000 0000'));
+      assert(isPhone('021-12345678'));
+    });
+    test('isPhone 拒绝非法电话', function () {
+      assert(!isPhone('abc'));
+      assert(!isPhone(''));
+    });
+    test('isEmail 合法/非法', function () {
+      assert(isEmail('name@company.com'));
+      assert(!isEmail('name@'));
+      assert(isEmail('')); // 空视为通过（字段为可选项）
+    });
+    test('isText 长度范围', function () {
+      assert(isText('hello', 3, 10));
+      assert(!isText('hi', 3, 10));
+      assert(!isText('this is too long', 1, 5));
+    });
+    test('validate 必填与规则', function () {
+      const errs = validate({ name: '', phone: 'abc' }, {
+        name: { required: true, min: 1, max: 40 },
+        phone: { required: true, type: 'phone' },
+      });
+      assert(errs.name);
+      assert(errs.phone);
+      assert(!errs.email);
+    });
+
+    // random
+    test('randomToken 长度正确', function () {
+      const t = randomToken(16);
+      assertEq(t.length, 32);
+      assert(/^[0-9a-f]+$/.test(t));
+    });
+    test('randomToken 两次不同', function () {
+      const a = randomToken(8), b = randomToken(8);
+      assert(a !== b);
+    });
+
+    // rate-limiter
+    test('canSubmit 默认允许 3 次', function () {
+      reset();
+      assert(canSubmit());
+      assert(canSubmit());
+      assert(canSubmit());
+      assert(!canSubmit()); // 第 4 次应拒绝
+    });
+
+    // csrf
+    test('csrf token 持久化与轮换', function () {
+      const a = getToken();
+      const b = getToken();
+      assertEq(a, b);
+      const c = rotateToken();
+      const d = getToken();
+      assertEq(c, d);
+      assert(c !== a);
+    });
+
+    // 渲染运行
+    run();
+    async function run() {
+      const results = document.getElementById('results');
+      const summary = document.getElementById('summary');
+      let pass = 0, fail = 0;
+      for (const c of cases) {
+        const node = document.createElement('div');
+        node.className = 'case';
+        try {
+          await c.fn();
+          node.innerHTML = '<span class="ok">PASS</span> <span class="name">' + c.name + '</span>';
+          pass++;
+        } catch (e) {
+          node.innerHTML = '<span class="ko">FAIL</span> <span class="name">' + c.name + '</span><pre>' + (e && e.message || e) + '</pre>';
+          fail++;
+        }
+        results.appendChild(node);
+      }
+      summary.className = 'summary ' + (fail === 0 ? 'pass' : 'fail');
+      summary.textContent = '总计 ' + (pass + fail) + ' · 通过 ' + pass + ' · 失败 ' + fail;
+    }
+  </script>
+</body>
+</html>

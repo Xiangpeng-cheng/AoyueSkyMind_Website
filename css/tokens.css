@@ -1,0 +1,59 @@
+/* =============================================================
+   tokens.css  设计令牌（Design Tokens）
+   - 所有视觉常量集中维护
+   - 其它 CSS 文件只引用 var(--xxx)
+   ============================================================= */
+:root {
+  /* 颜色 - 深色基底 */
+  --ink-900: #050608;
+  --ink-800: #0a0c10;
+  --ink-700: #11141a;
+  --ink-600: #1a1e27;
+  --ink-500: #262b36;
+
+  /* 颜色 - 文本灰阶 */
+  --haze-100: #f5f7fa;
+  --haze-200: #e1e5ec;
+  --haze-300: #a8aebd;
+  --haze-400: #6b7180;
+  --haze-500: #3a3f4a;
+
+  /* 颜色 - 品牌冷色 */
+  --brand-cyan: #00d4ff;
+  --brand-blue: #0a84ff;
+  --brand-violet: #5e5ce6;
+
+  /* 字体（系统字体栈优化：移除未加载的 Manrope/Inter，按平台质量排序中文字体）
+     - system-ui 各平台自动选最佳西文（macOS SF / Windows Segoe UI / Android Roboto）
+     - 中文按 PingFang SC(macOS) > HarmonyOS Sans(华为) > Microsoft YaHei(Win) > Noto Sans SC(Linux/Android)
+     - 末尾 emoji 回退避免彩色 emoji 显示成方框 */
+  --font-sans:
+    system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial,
+    'PingFang SC', 'HarmonyOS Sans SC', 'Microsoft YaHei', '微软雅黑', 'Noto Sans SC',
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  --font-display:
+    system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'PingFang SC', 'HarmonyOS Sans SC', 'Microsoft YaHei', '微软雅黑',
+    sans-serif;
+
+  /* 圆角 */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 28px;
+  --radius-pill: 999px;
+
+  /* 阴影 */
+  --shadow-card: 0 20px 40px -20px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 30px 80px -20px rgba(0, 212, 255, 0.45);
+
+  /* 容器 */
+  --container-max: 1280px;
+  --container-pad-mobile: 24px;
+  --container-pad-desktop: 40px;
+
+  /* 缓动 */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 0.2s;
+  --dur-base: 0.3s;
+}

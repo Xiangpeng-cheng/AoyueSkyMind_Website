@@ -1,0 +1,216 @@
+/* =============================================================
+   layout.css  容器 / 导航 / 页脚 / 通用区块
+   ============================================================= */
+.container-x {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-pad-mobile);
+}
+@media (min-width: 1024px) {
+  .container-x { padding: 0 var(--container-pad-desktop); }
+}
+
+/* 顶部导航 */
+.nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  z-index: 50;
+  transition: background var(--dur-base) var(--ease-out),
+              backdrop-filter var(--dur-base) var(--ease-out);
+  background: transparent;
+}
+.nav.scrolled {
+  background: rgba(5, 6, 8, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  transition: height var(--dur-base) var(--ease-out);
+}
+.nav.scrolled .nav-inner { height: 56px; }
+
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand img { width: 120px; height: 120px; border-radius: var(--radius-sm); transition: all var(--dur-base) var(--ease-out); background: transparent; }
+.nav.scrolled .brand img { width: 96px; height: 96px; }
+.brand-name { font-family: var(--font-display); font-size: 14px; font-weight: 600; letter-spacing: 0.02em; }
+.brand-sub { font-size: 11px; letter-spacing: 0.3em; color: var(--haze-300); text-transform: uppercase; }
+
+.nav-links { display: none; gap: 36px; }
+@media (min-width: 1024px) { .nav-links { display: flex; } }
+.nav-link {
+  position: relative;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.75);
+  transition: color var(--dur-fast) var(--ease-out);
+  padding: 6px 0;
+}
+.nav-link:hover, .nav-link.active { color: #fff; }
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(90deg, var(--brand-cyan), var(--brand-violet));
+  transform: translateX(-50%);
+  transition: width var(--dur-base) var(--ease-out);
+}
+.nav-link:hover::after, .nav-link.active::after { width: 24px; }
+
+.nav-cta { display: none; gap: 12px; }
+@media (min-width: 1024px) { .nav-cta { display: flex; } }
+
+.burger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-pill);
+  width: 36px;
+  height: 36px;
+  color: #fff;
+}
+@media (min-width: 1024px) { .burger { display: none; } }
+
+.mobile-panel { display: none; position: fixed; top: 80px; left: 0; right: 0; z-index: 40; padding: 0 16px; }
+.mobile-panel.open { display: block; }
+.mobile-panel .panel {
+  background: rgba(17, 20, 26, 0.95);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.mobile-panel a {
+  padding: 12px 14px;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+}
+.mobile-panel a.active, .mobile-panel a:hover { background: rgba(255, 255, 255, 0.08); color: #fff; }
+.mobile-panel .grid-cta { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 6px; padding: 0 4px 4px; }
+
+/* 页脚 */
+.footer {
+  margin-top: 120px;
+  background: var(--ink-800);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+}
+.footer::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.4), transparent);
+}
+.footer-grid {
+  display: grid;
+  gap: 48px;
+  padding: 64px 0;
+}
+@media (min-width: 1024px) {
+  .footer-grid { grid-template-columns: 1.4fr repeat(3, 1fr); }
+}
+.footer h5 {
+  font-size: 11px;
+  letter-spacing: 0.35em;
+  color: var(--haze-400);
+  text-transform: uppercase;
+  margin: 0 0 20px;
+  font-weight: 600;
+}
+.footer ul { display: flex; flex-direction: column; gap: 12px; }
+.footer ul a {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  transition: color var(--dur-fast) var(--ease-out);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.footer ul a:hover { color: #fff; }
+
+.subscribe-box {
+  margin-top: 64px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), transparent);
+  padding: 32px;
+  display: grid;
+  gap: 24px;
+}
+@media (min-width: 1024px) {
+  .subscribe-box { grid-template-columns: 1.2fr 1fr; align-items: center; }
+}
+.subscribe-form { display: flex; flex-direction: column; gap: 12px; }
+@media (min-width: 480px) { .subscribe-form { flex-direction: row; } }
+.subscribe-form input {
+  flex: 1;
+  background: rgba(5, 6, 8, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-pill);
+  padding: 12px 20px;
+  color: #fff;
+  font-size: 14px;
+  min-width: 0;
+}
+.subscribe-form input::placeholder { color: var(--haze-400); }
+.subscribe-form input:focus { border-color: var(--brand-cyan); outline: none; }
+
+.footer-bottom {
+  margin-top: 48px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 12px;
+  color: var(--haze-400);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+@media (min-width: 768px) {
+  .footer-bottom { flex-direction: row; align-items: center; justify-content: space-between; }
+}
+
+/* =============================================================
+   响应式增强：超小屏（<480px）+ 触摸优化 + 横屏适配
+   ============================================================= */
+
+/* 超小屏断点：缩小容器 padding / 导航 / 页脚间距 */
+@media (max-width: 479px) {
+  :root { --container-pad-mobile: 16px; }
+  .nav-inner { height: 64px; }
+  .nav.scrolled .nav-inner { height: 52px; }
+  .mobile-panel { top: 64px; }            /* 跟随导航高度 */
+  .footer-grid { padding: 40px 0; gap: 32px; }
+  .subscribe-box { padding: 20px; }
+  /* 移动端 logo 保持 80px 不致破版 */
+  .brand img { width: 80px; height: 80px; }
+  .nav.scrolled .brand img { width: 64px; height: 64px; }
+}
+
+/* 触屏设备：触摸目标 ≥44px（WCAG 推荐），关闭 hover 缩放 */
+@media (hover: none) and (pointer: coarse) {
+  .btn { min-height: 44px; }
+  .nav-link { padding: 12px 4px; }
+  .mobile-panel a { min-height: 44px; }
+  .card:hover .card-media img { transform: none; }
+  .product-card:hover .media img { transform: none; }
+}
+
+/* 横屏低高度适配 */
+@media (orientation: landscape) and (max-height: 500px) {
+  .nav-inner { height: 56px; }
+}

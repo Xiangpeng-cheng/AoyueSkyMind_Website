@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=5" />
+  <meta name="theme-color" content="#050608" />
+  <meta name="color-scheme" content="dark" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self';
+                 img-src 'self' data: blob:;
+                 style-src 'self' 'unsafe-inline';
+                 font-src 'self' data:;
+                 script-src 'self';
+                 connect-src 'self';
+                 frame-ancestors 'none';
+                 base-uri 'self';
+                 form-action 'self';
+                 object-src 'none';
+                 upgrade-insecure-requests" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="Permissions-Policy"
+        content="accelerometer=(),camera=(),geolocation=(),gyroscope=(),microphone=(),payment=(),usb=()" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+
+  <title>关于我们 · 武汉翱越智控科技有限公司</title>
+  <meta name="description" content="武汉翱越智控科技有限公司是一家专注于工业无人机与智能飞行控制系统研发制造的高新技术企业，以 SkyMind 飞控为核心，构建覆盖整机、载荷、地面站与低空数字化运营平台的全栈能力。" />
+  <meta name="keywords" content="武汉翱越智控, 关于我们, 企业介绍, 使命愿景, 发展历程, 资质荣誉, 团队文化, 工业无人机, 智能飞控" />
+  <meta name="author" content="武汉翱越智控科技有限公司" />
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <link rel="canonical" href="about.html" />
+
+  <link rel="icon" type="image/svg+xml" href="../assets/svg/logo_blue.svg" />
+  <link rel="apple-touch-icon" href="../assets/svg/logo_blue.svg" />
+
+  <style>
+/* ---------- tokens ---------- */
+:root {
+  --ink-900: #050608; --ink-800: #0a0c10; --ink-700: #11141a; --ink-600: #1a1e27; --ink-500: #262b36;
+  --haze-100: #f5f7fa; --haze-200: #e1e5ec; --haze-300: #a8aebd; --haze-400: #6b7180; --haze-500: #3a3f4a;
+  --brand-cyan: #00d4ff; --brand-blue: #0a84ff; --brand-violet: #5e5ce6;
+  --font-display: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'HarmonyOS Sans SC', 'Microsoft YaHei', '微软雅黑', sans-serif;
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, 'PingFang SC', 'HarmonyOS Sans SC', 'Microsoft YaHei', '微软雅黑', 'Noto Sans SC', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  --radius-sm: 8px; --radius-md: 16px; --radius-lg: 24px; --radius-xl: 28px; --radius-pill: 999px;
+  --shadow-card: 0 20px 40px -20px rgba(0, 0, 0, 0.6);
+  --shadow-glow: 0 30px 80px -20px rgba(0, 212, 255, 0.45);
+  --container-max: 1280px; --container-pad-mobile: 24px; --container-pad-desktop: 40px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); --dur-fast: 0.2s; --dur-base: 0.3s;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+html { color-scheme: dark; -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body { background: var(--ink-900); color: var(--haze-100); font-family: var(--font-sans); font-size: 15px; line-height: 1.75; letter-spacing: 0.01em; text-rendering: optimizeLegibility; font-feature-settings: "kern" 1, "palt" 1; font-variant-numeric: tabular-nums; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overflow-x: hidden; padding-top: env(safe-area-inset-top); padding-bottom: env(safe-area-inset-bottom); }
+* { -webkit-tap-highlight-color: transparent; }
+button, a, input, textarea, select { touch-action: manipulation; }
+:lang(zh) { font-feature-settings: "palt" 1; }
+a { color: inherit; text-decoration: none; }
+img, svg { max-width: 100%; display: block; background: var(--ink-700); }
+button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; padding: 0; }
+input, textarea, select { font: inherit; color: inherit; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+:focus-visible { outline: 2px solid var(--brand-cyan); outline-offset: 2px; border-radius: 6px; }
+::selection { background: rgba(0, 212, 255, 0.35); color: #fff; }
+h1, h2, h3, h4, h5 { font-family: var(--font-display); font-weight: 600; letter-spacing: 0; line-height: 1.3; margin: 0; color: var(--haze-100); }
+p { margin: 0; }
+.skip-link { position: absolute; left: -9999px; top: 0; background: var(--brand-cyan); color: var(--ink-900); padding: 8px 14px; border-radius: 0 0 var(--radius-sm) 0; z-index: 100; font-weight: 600; }
+.skip-link:focus { left: 0; }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; } }
+
+/* ---------- layout ---------- */
+.container-x { max-width: var(--container-max); margin: 0 auto; padding: 0 var(--container-pad-mobile); }
+@media (min-width: 1024px) { .container-x { padding: 0 var(--container-pad-desktop); } }
+.nav { position: fixed; inset: 0 0 auto 0; z-index: 50; transition: background var(--dur-base) var(--ease-out), backdrop-filter var(--dur-base) var(--ease-out); background: transparent; }
+.nav.scrolled { background: rgba(5, 6, 8, 0.85); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+.nav-inner { display: flex; align-items: center; justify-content: space-between; height: 80px; transition: height var(--dur-base) var(--ease-out); }
+.nav.scrolled .nav-inner { height: 56px; }
+.brand { display: flex; align-items: center; gap: 12px; }
+.brand img { width: 120px; height: 120px; border-radius: var(--radius-sm); transition: all var(--dur-base) var(--ease-out); background: transparent; }
+.nav.scrolled .brand img { width: 96px; height: 96px; }
+.brand-name { font-family: var(--font-display); font-size: 14px; font-weight: 600; letter-spacing: 0.02em; }
+.brand-sub { font-size: 11px; letter-spacing: 0.3em; color: var(--haze-300); text-transform: uppercase; }
+.nav-links { display: none; gap: 36px; }
+@media (min-width: 1024px) { .nav-links { display: flex; } }
+.nav-link { position: relative; font-size: 13.5px; font-weight: 500; color: rgba(255, 255, 255, 0.75); transition: color var(--dur-fast) var(--ease-out); padding: 6px 0; }
+.nav-link:hover, .nav-link.active { color: #fff; }
+.nav-link::after { content: ''; position: absolute; left: 50%; bottom: -6px; width: 0; height: 1px; background: linear-gradient(90deg, var(--brand-cyan), var(--brand-violet)); transform: translateX(-50%); transition: width var(--dur-base) var(--ease-out); }
+.nav-link:hover::after, .nav-link.active::after { width: 24px; }
+.nav-cta { display: none; gap: 12px; }
+@media (min-width: 1024px) { .nav-cta { display: flex; } }
+.burger { display: inline-flex; align-items: center; justify-content: center; border: 1px solid rgba(255, 255, 255, 0.15); border-radius: var(--radius-pill); width: 36px; height: 36px; color: #fff; }
+@media (min-width: 1024px) { .burger { display: none; } }
+.mobile-panel { display: none; position: fixed; top: 80px; left: 0; right: 0; z-index: 40; padding: 0 16px; }
+.mobile-panel.open { display: block; }
+.mobile-panel .panel { background: rgba(17, 20, 26, 0.95); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 20px; padding: 12px; display: flex; flex-direction: column; gap: 4px; }
+.mobile-panel a { padding: 12px 14px; border-radius: 14px; font-size: 14px; font-weight: 500; color: rgba(255, 255, 255, 0.85); }
+.mobile-panel a.active, .mobile-panel a:hover { background: rgba(255, 255, 255, 0.08); color: #fff; }
+.mobile-panel .grid-cta { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 6px; padding: 0 4px 4px; }
+
+/* ---------- components ---------- */
+.btn { display: inline-flex; align-items: center; gap: 8px; border-radius: var(--radius-pill); padding: 10px 20px; font-size: 13px; font-weight: 500; transition: all var(--dur-base) var(--ease-out); white-space: nowrap; border: 1px solid transparent; text-decoration: none; }
+.btn-primary { background: #fff; color: var(--ink-900); }
+.btn-primary:hover { background: var(--brand-cyan); box-shadow: var(--shadow-glow); }
+.btn-ghost { border-color: rgba(255, 255, 255, 0.2); color: var(--haze-100); }
+.btn-ghost:hover { border-color: var(--brand-cyan); color: #fff; background: rgba(0, 212, 255, 0.05); }
+.btn-outline { border-color: rgba(255, 255, 255, 0.3); color: var(--haze-100); }
+.btn-outline:hover { background: rgba(255, 255, 255, 0.08); }
+.eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px; border-radius: var(--radius-pill); border: 1px solid rgba(255, 255, 255, 0.15); font-size: 11px; letter-spacing: 0.4em; color: var(--haze-300); text-transform: uppercase; }
+.eyebrow .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--brand-cyan); }
+.card { position: relative; overflow: hidden; border-radius: var(--radius-lg); border: 1px solid rgba(255, 255, 255, 0.08); background: var(--ink-800); transition: all var(--dur-base) var(--ease-out); }
+.card:hover { border-color: rgba(0, 212, 255, 0.5); }
+.reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out); }
+.reveal.in { opacity: 1; transform: none; }
+
+/* ---------- 页面级样式（关于我们专属） ---------- */
+section { position: relative; }
+.page-hero { position: relative; overflow: hidden; padding: 200px 0 80px; }
+@media (min-width: 768px) { .page-hero { padding: 220px 0 100px; } }
+.page-hero .aurora { position: absolute; inset: 0; background: radial-gradient(60% 60% at 20% 30%, rgba(0, 212, 255, 0.30) 0%, transparent 60%), radial-gradient(50% 50% at 80% 20%, rgba(94, 92, 230, 0.30) 0%, transparent 60%); z-index: -2; }
+.page-hero .grain { position: absolute; inset: 0; z-index: -1; opacity: 0.4; mix-blend-mode: overlay; background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0.06 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>"); }
+.page-hero h1 { font-size: clamp(36px, 5.5vw, 64px); line-height: 1.06; margin: 24px 0 0; }
+.page-hero h1 .grad { background: linear-gradient(135deg, #fff 0%, #a8aebd 60%, #00d4ff 120%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.page-hero p.lead { font-size: 17px; line-height: 1.75; color: #a8aebd; max-width: 720px; margin: 24px 0 0; }
+
+/* 通用内容 section */
+.about-section { padding: 80px 0; border-top: 1px solid rgba(255, 255, 255, 0.05); }
+.about-section:nth-child(even) { background: rgba(10, 12, 16, 0.5); }
+.section-eyebrow { font-size: 11px; letter-spacing: 0.4em; color: var(--brand-cyan); text-transform: uppercase; }
+.about-section h2 { font-size: clamp(28px, 4vw, 44px); line-height: 1.15; margin: 12px 0 24px; }
+.about-section .intro { font-size: 15px; line-height: 1.85; color: var(--haze-300); max-width: 760px; margin: 0 0 40px; }
+
+/* 公司简介卡片矩阵 */
+.intro-grid { display: grid; gap: 20px; }
+@media (min-width: 768px) { .intro-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .intro-grid { grid-template-columns: repeat(4, 1fr); } }
+.intro-card { padding: 28px; border-radius: var(--radius-lg); border: 1px solid rgba(255, 255, 255, 0.08); background: var(--ink-800); }
+.intro-card .k { font-size: 11px; letter-spacing: 0.3em; color: var(--haze-400); text-transform: uppercase; margin: 0 0 12px; }
+.intro-card .v { font-family: var(--font-display); font-size: 18px; color: #fff; line-height: 1.4; }
+.intro-card .desc { margin: 12px 0 0; font-size: 13px; color: var(--haze-300); line-height: 1.7; }
+
+/* 使命愿景双栏 */
+.mv-grid { display: grid; gap: 24px; }
+@media (min-width: 768px) { .mv-grid { grid-template-columns: 1fr 1fr; } }
+.mv-card { padding: 40px; border-radius: var(--radius-xl); border: 1px solid rgba(255, 255, 255, 0.08); background: linear-gradient(135deg, rgba(0, 212, 255, 0.04), rgba(94, 92, 230, 0.04)); position: relative; overflow: hidden; }
+.mv-card .mv-icon { width: 56px; height: 56px; border-radius: var(--radius-md); background: linear-gradient(135deg, rgba(0, 212, 255, 0.15), rgba(94, 92, 230, 0.15)); display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 24px; font-weight: 700; color: var(--brand-cyan); margin-bottom: 24px; }
+.mv-card h3 { font-size: 24px; margin: 0 0 16px; }
+.mv-card p { font-size: 15px; line-height: 1.85; color: var(--haze-300); margin: 0; }
+.mv-card .mv-tag { display: inline-flex; align-items: center; gap: 8px; padding: 4px 12px; border-radius: var(--radius-pill); border: 1px solid rgba(255, 255, 255, 0.15); font-size: 11px; letter-spacing: 0.4em; color: var(--haze-300); text-transform: uppercase; margin-bottom: 24px; }
+
+/* 发展历程时间线 */
+.timeline { position: relative; padding-left: 32px; }
+.timeline::before { content: ''; position: absolute; left: 8px; top: 8px; bottom: 8px; width: 1px; background: linear-gradient(180deg, var(--brand-cyan), rgba(94, 92, 230, 0.3), transparent); }
+.timeline-item { position: relative; padding: 0 0 40px; }
+.timeline-item:last-child { padding-bottom: 0; }
+.timeline-item::before { content: ''; position: absolute; left: -32px; top: 6px; width: 17px; height: 17px; border-radius: 50%; background: var(--ink-900); border: 2px solid var(--brand-cyan); box-shadow: 0 0 0 6px rgba(0, 212, 255, 0.08); }
+.timeline-item .year { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--brand-cyan); letter-spacing: 0.02em; }
+.timeline-item h4 { font-size: 18px; margin: 8px 0 12px; }
+.timeline-item p { font-size: 14px; line-height: 1.8; color: var(--haze-300); margin: 0; max-width: 720px; }
+
+/* 资质荣誉网格 */
+.qual-grid { display: grid; gap: 16px; }
+@media (min-width: 640px) { .qual-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .qual-grid { grid-template-columns: repeat(3, 1fr); } }
+.qual-item { padding: 24px; border-radius: var(--radius-lg); border: 1px solid rgba(255, 255, 255, 0.06); background: rgba(255, 255, 255, 0.02); transition: all var(--dur-base) var(--ease-out); }
+.qual-item:hover { border-color: rgba(0, 212, 255, 0.4); background: rgba(0, 212, 255, 0.03); }
+.qual-item .q-icon { width: 40px; height: 40px; border-radius: var(--radius-sm); background: rgba(0, 212, 255, 0.08); color: var(--brand-cyan); display: inline-flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 700; font-size: 13px; margin-bottom: 16px; }
+.qual-item h4 { font-size: 15px; margin: 0 0 8px; }
+.qual-item p { font-size: 13px; line-height: 1.7; color: var(--haze-300); margin: 0; }
+
+/* 团队文化 */
+.culture-grid { display: grid; gap: 24px; }
+@media (min-width: 640px) { .culture-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .culture-grid { grid-template-columns: repeat(4, 1fr); } }
+.culture-item { padding: 28px 24px; border-radius: var(--radius-lg); border: 1px solid rgba(255, 255, 255, 0.08); background: var(--ink-800); position: relative; overflow: hidden; }
+.culture-item .num { font-family: var(--font-display); font-size: 48px; font-weight: 800; color: transparent; -webkit-text-stroke: 1.5px rgba(0, 212, 255, 0.25); line-height: 1; margin-bottom: 16px; letter-spacing: -0.04em; }
+.culture-item h4 { font-size: 17px; margin: 0 0 12px; }
+.culture-item p { font-size: 13px; line-height: 1.75; color: var(--haze-300); margin: 0; }
+
+/* 数据指标条 */
+.stats-row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; padding: 40px; border-radius: var(--radius-xl); border: 1px solid rgba(255, 255, 255, 0.08); background: linear-gradient(135deg, rgba(0, 212, 255, 0.05), rgba(94, 92, 230, 0.05)); }
+@media (min-width: 768px) { .stats-row { grid-template-columns: repeat(4, 1fr); } }
+.stat-item { text-align: center; }
+.stat-item .num { font-family: var(--font-display); font-size: clamp(32px, 4vw, 44px); font-weight: 700; color: var(--brand-cyan); letter-spacing: -0.02em; line-height: 1; }
+.stat-item .label { margin-top: 12px; font-size: 12px; letter-spacing: 0.2em; color: var(--haze-300); text-transform: uppercase; }
+
+/* 页脚 */
+.footer { margin-top: 80px; background: var(--ink-800); border-top: 1px solid rgba(255, 255, 255, 0.05); position: relative; }
+.footer::before { content: ''; position: absolute; inset: 0 0 auto 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(0, 212, 255, 0.4), transparent); }
+.footer-grid { display: grid; gap: 48px; padding: 64px 0; }
+@media (min-width: 1024px) { .footer-grid { grid-template-columns: 1.4fr repeat(3, 1fr); } }
+.footer h5 { font-size: 11px; letter-spacing: 0.35em; color: var(--haze-400); text-transform: uppercase; margin: 0 0 20px; font-weight: 600; }
+.footer ul { display: flex; flex-direction: column; gap: 12px; }
+.footer ul a { color: rgba(255, 255, 255, 0.85); font-size: 14px; transition: color var(--dur-fast) var(--ease-out); display: inline-flex; align-items: center; gap: 6px; }
+.footer ul a:hover { color: #fff; }
+.footer-bottom { margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(255, 255, 255, 0.05); font-size: 12px; color: var(--haze-400); display: flex; flex-direction: column; gap: 12px; }
+@media (min-width: 768px) { .footer-bottom { flex-direction: row; align-items: center; justify-content: space-between; } }
+
+/* ============================================================
+   响应式增强：超小屏（<480px）+ 触摸优化 + 横屏适配
+   ============================================================ */
+@media (max-width: 479px) {
+  :root { --container-pad-mobile: 16px; }
+  .nav-inner { height: 64px; }
+  .nav.scrolled .nav-inner { height: 52px; }
+  .mobile-panel { top: 64px; }
+  .footer-grid { padding: 40px 0; gap: 32px; }
+  .subscribe-box { padding: 20px; }
+  .hero { padding: 130px 0 70px; }
+  .hero h1 { font-size: clamp(28px, 8vw, 36px); line-height: 1.1; }
+  .hero p.lead { font-size: 14.5px; line-height: 1.7; }
+  .hero-stats { gap: 16px; padding-top: 24px; }
+  .hero-stats dd { font-size: 22px; }
+  .section-title h2 { font-size: clamp(24px, 6vw, 32px); }
+  .product-card {
+    flex: 0 0 88vw;
+    height: auto;
+    min-height: 420px;
+  }
+  .product-card .body { padding: 18px; }
+  .contact-form { padding: 20px; }
+  .captcha { flex-direction: column; align-items: stretch; gap: 8px; }
+  .captcha input { width: 100%; }
+  .field input, .field textarea, .field select { padding: 12px 14px; font-size: 16px; }
+  /* 移动端 logo 保持 80px 不致破版 */
+  .brand img { width: 80px; height: 80px; }
+  .nav.scrolled .brand img { width: 64px; height: 64px; }
+}
+@media (hover: none) and (pointer: coarse) {
+  .btn { min-height: 44px; }
+  .nav-link { padding: 12px 4px; }
+  .mobile-panel a { min-height: 44px; }
+  .card:hover .card-media img { transform: none; }
+  .product-card:hover .media img { transform: none; }
+}
+@media (orientation: landscape) and (max-height: 500px) {
+  .nav-inner { height: 56px; }
+}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="nav" id="nav" role="banner">
+    <div class="container-x nav-inner">
+      <a class="brand" href="../index.html" aria-label="武汉翱越智控 首页">
+        <img src="../assets/svg/logo_blue.svg" alt="" width="120" height="120" />
+        <span>
+          <span class="brand-name">武汉翱越智控</span><br />
+          <span class="brand-sub">Aoyue SkyMind</span>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="主导航">
+        <a class="nav-link" href="../index.html" data-nav>首页</a>
+        <a class="nav-link" href="products.html" data-nav>产品中心</a>
+        <a class="nav-link" href="solutions.html" data-nav>行业方案</a>
+        <a class="nav-link" href="payloads.html" data-nav>飞控与载荷</a>
+        <a class="nav-link active" href="about.html" data-nav aria-current="page">关于我们</a>
+        <a class="nav-link" href="contact.html" data-nav>联系我们</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="btn btn-ghost" href="contact.html">商务合作</a>
+        <a class="btn btn-primary" href="contact.html">咨询采购</a>
+      </div>
+      <button class="burger" type="button" id="burger" aria-label="切换菜单" aria-expanded="false" aria-controls="mobile-panel">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      </button>
+    </div>
+    <div class="mobile-panel" id="mobile-panel">
+      <div class="panel">
+        <a href="../index.html" data-nav>首页</a>
+        <a href="products.html" data-nav>产品中心</a>
+        <a href="solutions.html" data-nav>行业方案</a>
+        <a href="payloads.html" data-nav>飞控与载荷</a>
+        <a class="active" href="about.html" data-nav>关于我们</a>
+        <a href="contact.html" data-nav>联系我们</a>
+        <div class="grid-cta">
+          <a class="btn btn-ghost" href="contact.html">商务合作</a>
+          <a class="btn btn-primary" href="contact.html">咨询采购</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- 页面 Hero -->
+    <section class="page-hero" aria-label="关于我们主视觉">
+      <div class="aurora" aria-hidden="true"></div>
+      <div class="grain" aria-hidden="true"></div>
+      <div class="container-x">
+        <div class="reveal">
+          <span class="eyebrow"><span class="dot"></span>About Aoyue</span>
+          <h1>
+            <span class="grad">让每一次飞行</span><br />
+            都可被信赖
+          </h1>
+          <p class="lead">
+            武汉翱越智控科技有限公司是一家专注于工业无人机与智能飞行控制系统研发制造的高新技术企业。
+            我们以 SkyMind 飞控为核心，构建覆盖整机、载荷、地面站与低空数字化运营平台的全栈能力，
+            致力于使工业无人机成为安全、可靠、可量化的新型生产力。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 公司简介 -->
+    <section class="about-section" id="intro" aria-label="公司简介">
+      <div class="container-x">
+        <div class="reveal">
+          <span class="section-eyebrow">Company Overview</span>
+          <h2>公司简介</h2>
+          <p class="intro">
+            武汉翱越智控科技有限公司（Aoyue SkyMind）立足中国光谷，深耕工业无人机领域。
+            公司以自研 SkyMind 飞控系统为技术底座，沿"飞控—整机—载荷—链路—平台"全链路构建产品体系，
+            面向电力、测绘、应急、农业、林业与城市治理等行业，提供从单机作业到机队协同的端到端解决方案。
+            我们坚信，工业级无人机的核心价值在于"可被信赖"——可靠的平台、可量化的成果与可复用的作业流程，
+            这是翱越智控在产品定义、研发制造与场景落地中始终恪守的准则。
+          </p>
+        </div>
+        <div class="intro-grid">
+          <div class="intro-card reveal">
+            <p class="k">公司名称</p>
+            <p class="v">武汉翱越智控科技有限公司</p>
+            <p class="desc">专注工业无人机与智能飞控系统研发制造的高新技术企业。</p>
+          </div>
+          <div class="intro-card reveal">
+            <p class="k">品牌</p>
+            <p class="v">Aoyue SkyMind</p>
+            <p class="desc">"翱越"寓意翱翔低空、超越极限；"SkyMind"代表以智能飞控连接天空与产业。</p>
+          </div>
+          <div class="intro-card reveal">
+            <p class="k">业务范围</p>
+            <p class="v">整机 / 飞控 / 载荷 / 行业方案</p>
+            <p class="desc">从核心控制器到整机平台，从单机作业到机队协同的完整能力栈。</p>
+          </div>
+          <div class="intro-card reveal">
+            <p class="k">官方联系</p>
+            <p class="v">contact@aoyue-uav.com</p>
+            <p class="desc">商务合作、产品咨询与生态合作均可通过官方邮箱联系。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 使命愿景 -->
+    <section class="about-section" id="mission" aria-label="使命愿景">
+      <div class="container-x">
+        <div class="reveal">
+          <span class="section-eyebrow">Mission & Vision</span>
+          <h2>使命与愿景</h2>
+          <p class="intro">
+            我们以"让工业飞行可被信赖"为使命，以"成为工业低空领域值得托付的核心力量"为愿景。
+            围绕安全、可靠与可量化三条主线，翱越智控持续将前沿技术转化为可量产、可部署、可演进的工业能力。
+          </p>
+        </div>
+        <div class="mv-grid">
+          <div class="mv-card reveal">
+            <div class="mv-icon">使</div>
+            <span class="mv-tag"><span class="dot" style="width:6px;height:6px;border-radius:50%;background:var(--brand-cyan);display:inline-block"></span>Mission</span>
+            <h3>让工业飞行可被信赖</h3>
+            <p>
+              以自研飞控为核心，构建安全、稳定、可量化的工业无人机能力栈，使每一架飞行平台、每一次作业任务、
+              每一份飞行数据都达到工业级可靠性标准，让客户在严苛场景下也能放心托付。
+            </p>
+          </div>
+          <div class="mv-card reveal">
+            <div class="mv-icon">愿</div>
+            <span class="mv-tag"><span class="dot" style="width:6px;height:6px;border-radius:50%;background:var(--brand-cyan);display:inline-block"></span>Vision</span>
+            <h3>成为工业低空值得托付的核心力量</h3>
+            <p>
+              做中国工业低空领域的技术底座与场景共建者，以硬件、软件与平台三位一体的能力，
+              赋能电力、测绘、应急、农业、林业与城市治理等行业的数字化升级，推动低空生产力规模化落地。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 发展历程 -->
+    <section class="about-section" id="history" aria-label="发展历程">
+      <div class="container-x">
+        <div class="reveal">
+          <span class="section-eyebrow">Milestones</span>
+          <h2>发展历程</h2>
+          <p class="intro">
+            从飞控算法起步，到整机平台与行业方案落地，翱越智控沿着"核心控制—整机平台—场景方案—数字化运营"
+            的路径稳步推进，每一步都坚持技术沉淀与场景验证并重。
+          </p>
+        </div>
+        <div class="timeline reveal">
+          <div class="timeline-item">
+            <div class="year">第一阶段</div>
+            <h4>飞控核心奠基</h4>
+            <p>
+              组建核心研发团队，聚焦工业级飞行控制系统的算法自研，完成双冗余 IMU 架构与故障切换机制的原理样机，
+              为后续整机平台奠定控制底座。
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="year">第二阶段</div>
+            <h4>整机平台与载荷验证</h4>
+            <p>
+              推出多旋翼、复合翼与重载平台的多形态整机产品，同步完成可见光、红外、多光谱与激光雷达载荷的统一接口适配，
+              在电力、测绘等场景中完成真实作业验证。
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="year">第三阶段</div>
+            <h4>行业方案落地</h4>
+            <p>
+              围绕电力巡检、测绘建模、应急救援、智慧农业、林业防护与智慧城市六大行业构建闭环解决方案，
+              形成"平台 + 载荷 + 软件 + 服务"的端到端能力体系。
+            </p>
+          </div>
+          <div class="timeline-item">
+            <div class="year">第四阶段</div>
+            <h4>数字化运营与生态共建</h4>
+            <p>
+              面向机队协同与数字化运营场景，迭代航线规划、数据治理与 AI 识别能力，开放 SDK 与 API，
+              与行业客户、集成商及科研院所共建低空数字化生态。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 资质荣誉 -->
+    <section class="about-section" id="qualifications" aria-label="资质荣誉">
+      <div class="container-x">
+        <div class="reveal">
+          <span class="section-eyebrow">Qualifications</span>
+          <h2>资质与质量体系</h2>
+          <p class="intro">
+            翱越智控以工业级可靠性为底线，建立了贯穿研发、生产、交付与售后的全流程质量管理体系。
+            公司已通过质量管理体系认证并取得行业相关资质，具体资质以登记机关与官方网站公示为准。
+          </p>
+        </div>
+        <div class="qual-grid">
+          <div class="qual-item reveal">
+            <div class="q-icon">ISO</div>
+            <h4>质量管理体系认证</h4>
+            <p>按照 ISO 9001 标准建立全流程质量管理体系，覆盖研发、生产、交付与服务环节。</p>
+          </div>
+          <div class="qual-item reveal">
+            <div class="q-icon">研</div>
+            <h4>研发与知识产权</h4>
+            <p>具备核心算法与硬件自主研发能力，多项飞控、载荷与平台相关知识产权已申请或授权。</p>
+          </div>
+          <div class="qual-item reveal">
+            <div class="q-icon">证</div>
+            <h4>行业相关资质</h4>
+            <p>具体行业资质以登记机关与官方网站公示为准，确保客户在合规框架内开展作业。</p>
+          </div>
+          <div class="qual-item reveal">
+            <div class="q-icon">测</div>
+            <h4>测试与验证体系</h4>
+            <p>建立飞行控制、动力系统、链路通信与环境适应性的多维度测试流程，保障产品可靠性。</p>
+          </div>
+          <div class="qual-item reveal">
+            <div class="q-icon">服</div>
+            <h4>售后服务体系</h4>
+            <p>提供产品培训、固件升级、技术支持与备件保障，覆盖整机生命周期内的服务需求。</p>
+          </div>
+          <div class="qual-item reveal">
+            <div class="q-icon">安</div>
+            <h4>信息安全合规</h4>
+            <p>链路层加密、数据安全与隐私保护符合工业级信息安全最佳实践，保障客户数据资产安全。</p>
+          </div>
+        </div>
+        <p class="reveal" style="margin-top:24px;font-size:13px;color:var(--haze-400);line-height:1.7">
+          注：以上资质为通用描述，公司具体资质、认证证书与有效期以登记机关与官方网站公示信息为准。
+        </p>
+      </div>
+    </section>
+
+    <!-- 团队文化 -->
+    <section class="about-section" id="culture" aria-label="团队文化">
+      <div class="container-x">
+        <div class="reveal">
+          <span class="section-eyebrow">Team Culture</span>
+          <h2>团队与文化</h2>
+          <p class="intro">
+            翱越智控团队由飞控算法、硬件设计、嵌入式软件、行业方案与产品工程等领域的人才组成，
+            坚持"工程化、可量产、可演进"的研发哲学，以解决行业真实问题为价值导向。
+          </p>
+        </div>
+        <div class="culture-grid">
+          <div class="culture-item reveal">
+            <div class="num">01</div>
+            <h4>工程化优先</h4>
+            <p>以工业级可靠性为准绳，所有方案均经过完整的工程化验证，确保可量产、可维护、可演进。</p>
+          </div>
+          <div class="culture-item reveal">
+            <div class="num">02</div>
+            <h4>场景驱动</h4>
+            <p>从行业真实作业场景出发定义产品与方案，让每一项技术能力都对应可量化的作业价值。</p>
+          </div>
+          <div class="culture-item reveal">
+            <div class="num">03</div>
+            <h4>开放共建</h4>
+            <p>开放 SDK、API 与生态接口，与客户、集成商及科研院所共建低空数字化能力体系。</p>
+          </div>
+          <div class="culture-item reveal">
+            <div class="num">04</div>
+            <h4>长期主义</h4>
+            <p>坚持以长期价值为导向，不追逐短期概念，专注于做好飞行控制这一核心命题。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 关键指标 -->
+    <section class="about-section" id="stats" aria-label="关键能力指标">
+      <div class="container-x">
+        <div class="reveal">
+          <span class="section-eyebrow">Capability Stack</span>
+          <h2>能力栈一览</h2>
+          <p class="intro">
+            围绕工业无人机作业的全链路需求，翱越智控构建了从核心控制到数字化运营的能力栈，
+            以下是反映当前能力覆盖范围的关键指标。
+          </p>
+        </div>
+        <div class="stats-row reveal">
+          <div class="stat-item">
+            <div class="num">6+</div>
+            <div class="label">整机平台与载荷</div>
+          </div>
+          <div class="stat-item">
+            <div class="num">6</div>
+            <div class="label">行业解决方案</div>
+          </div>
+          <div class="stat-item">
+            <div class="num">8 TOPS</div>
+            <div class="label">飞控 AI 算力</div>
+          </div>
+          <div class="stat-item">
+            <div class="num">≤30 km</div>
+            <div class="label">链路通信距离</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section style="padding:96px 0" aria-label="商务合作">
+      <div class="container-x">
+        <div class="card reveal" style="padding:64px 40px;text-align:center;background:linear-gradient(135deg,rgba(0,212,255,0.08),rgba(94,92,230,0.08))">
+          <span class="eyebrow"><span class="dot"></span>Work with Us</span>
+          <h2 style="font-size:clamp(28px,4vw,40px);margin:16px 0 0">与翱越共建低空生产力</h2>
+          <p style="margin:16px auto 0;max-width:640px;color:var(--haze-300);font-size:15px;line-height:1.7">
+            无论您是行业用户、集成商、科研院所还是有志于低空事业的人才，我们都欢迎与您对话，共同推动工业无人机的可靠落地。
+          </p>
+          <div style="margin-top:32px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+            <a class="btn btn-primary" href="contact.html">联系我们</a>
+            <a class="btn btn-ghost" href="products.html">查看产品矩阵</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container-x footer-grid">
+      <div>
+        <div class="brand">
+          <img src="../assets/svg/logo_blue.svg" alt="" width="144" height="144" loading="lazy" />
+          <span>
+            <span class="brand-name" style="font-size:16px">武汉翱越智控科技有限公司</span><br />
+            <span class="brand-sub">Aoyue SkyMind · Industrial UAV</span>
+          </span>
+        </div>
+        <p style="margin:24px 0 0;max-width:380px;color:var(--haze-300);font-size:14px;line-height:1.7">
+          以智能飞行控制为核心，专注工业无人机整机、飞控载荷与行业数字化解决方案，赋能低空生产力。
+        </p>
+      </div>
+      <div>
+        <h5>产品</h5>
+        <ul>
+          <li><a href="products.html#m500">Aoyue M500</a></li>
+          <li><a href="products.html#x12">Aoyue X12</a></li>
+          <li><a href="products.html#t70">Aoyue T70</a></li>
+          <li><a href="products.html#fcx">SkyMind FC-X</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>解决方案</h5>
+        <ul>
+          <li><a href="solutions.html">电力巡检</a></li>
+          <li><a href="solutions.html">测绘建模</a></li>
+          <li><a href="solutions.html">应急救援</a></li>
+          <li><a href="solutions.html">智慧农业</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>公司</h5>
+        <ul>
+          <li><a href="about.html">关于我们</a></li>
+          <li><a href="contact.html">联系我们</a></li>
+          <li><a href="payloads.html">飞控与载荷</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container-x footer-bottom">
+      <span>© <span id="year"></span> 武汉翱越智控科技有限公司 · Aoyue SkyMind. 保留所有权利。</span>
+      <span>网站访问统计与异常请求防护已启用</span>
+    </div>
+  </footer>
+
+  <script defer src="../js/app.bundle.js"></script>
+</body>
+</html>
