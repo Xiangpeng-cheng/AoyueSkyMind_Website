@@ -6,6 +6,7 @@
 
 import { $, h } from '../utils/dom.js';
 import { esc } from '../utils/escape.js';
+import { cinematicScene } from '../utils/scene.js';
 import { partners, products, shoton, solutions, payloads, company } from '../data/content.js';
 
 const ARROW_SVG = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>';
@@ -28,10 +29,15 @@ export function renderMarquee() {
 export function renderProducts() {
   const root = $('#carousel');
   if (!root) return;
+  const href = /\/pages\//.test(location.pathname) ? 'products.html' : 'pages/products.html';
+  root.classList.toggle('is-solo', products.length === 1);
   root.innerHTML = products.map(function (p) {
     return [
-      '<a class="product-card" href="#payloads">',
-      '  <div class="media"><span class="card-tag">' + esc(p.cat) + '</span></div>',
+      '<a class="product-card' + (products.length === 1 ? ' product-feature' : '') + '" href="' + href + '">',
+      '  <div class="media">',
+      '    <img src="' + cinematicScene(p.scene) + '" alt="' + esc(p.name) + '" width="800" height="500" loading="lazy" decoding="async" />',
+      '    <span class="card-tag">' + esc(p.cat) + '</span>',
+      '  </div>',
       '  <div class="body">',
       '    <div>',
       '      <div class="name">' + esc(p.name) + '</div>',
@@ -59,7 +65,10 @@ export function renderShotOn() {
   root.innerHTML = shoton.map(function (item) {
     return [
       '<a class="card" href="#solutions">',
-      '  <div class="card-media"><span class="card-tag">Shot on Aoyue</span></div>',
+      '  <div class="card-media shot">',
+      '    <img src="' + cinematicScene(item.scene) + '" alt="' + esc(item.title) + '" width="800" height="500" loading="lazy" decoding="async" />',
+      '    <span class="card-tag">作业场景</span>',
+      '  </div>',
       '  <div class="card-body">',
       '    <span style="font-size:11px;letter-spacing:.4em;color:var(--brand-cyan);text-transform:uppercase">' + esc(item.tag) + '</span>',
       '    <h3 style="font-family:Manrope;font-size:22px;color:#fff;margin:6px 0 0">' + esc(item.title) + '</h3>',
@@ -76,10 +85,16 @@ export function renderSolutions() {
   root.innerHTML = solutions.map(function (s) {
     return [
       '<a class="card" href="#contact">',
-      '  <div class="card-media"><span class="card-tag">' + esc(s.cat) + '</span></div>',
+      '  <div class="card-media scene">',
+      '    <img src="' + cinematicScene(s.scene) + '" alt="' + esc(s.title) + '" width="800" height="500" loading="lazy" decoding="async" />',
+      '    <span class="card-tag">' + esc(s.cat) + '</span>',
+      '  </div>',
       '  <div class="card-body">',
       '    <h3 style="font-family:Manrope;font-size:22px;color:#fff;margin:0">' + esc(s.title) + '</h3>',
       '    <p style="margin:6px 0 0;color:var(--haze-300);font-size:14px;line-height:1.6">' + esc(s.summary) + '</p>',
+      (s.offer && s.offer.length
+        ? '<ul class="offer-list">' + s.offer.map(function (item) { return '<li>' + esc(item) + '</li>'; }).join('') + '</ul>'
+        : ''),
       '  </div>',
       '</a>',
     ].join('');
@@ -103,4 +118,19 @@ export function renderPayloads() {
 export function renderCompanyQualification() {
   const node = $('#qualification');
   if (node) node.textContent = company.qualification;
+}
+
+export function hydrateProductVisuals() {
+  document.querySelectorAll('[data-scene]').forEach(function (el) {
+    if (el.querySelector('img.scene-art')) return;
+    const img = document.createElement('img');
+    img.className = 'scene-art';
+    img.src = cinematicScene(el.getAttribute('data-scene'));
+    img.alt = el.getAttribute('data-alt') || '';
+    img.width = 800;
+    img.height = 500;
+    img.decoding = 'async';
+    img.loading = 'lazy';
+    el.insertBefore(img, el.firstChild);
+  });
 }

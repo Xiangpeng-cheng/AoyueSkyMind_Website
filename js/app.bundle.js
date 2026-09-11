@@ -164,40 +164,33 @@
   ];
 
   var products = [
-    { name: 'Aoyue M500 长续航多旋翼', tag: '面向电力巡检、应急救援与测绘建模的旗舰六旋翼平台', cat: '工业无人机' },
-    { name: 'Aoyue X12 复合翼无人机',   tag: '融合多旋翼垂直起降与固定翼长航时特性', cat: '工业无人机' },
-    { name: 'Aoyue T70 重载作业平台',   tag: '面向植保与中短途物流的大载重任务平台', cat: '工业无人机' },
-    { name: 'SkyMind FC-X 飞控系统',   tag: '双冗余 IMU 与 AI 协处理器架构', cat: '飞控载荷' },
-    { name: 'Aoyue G200 便携地面站',   tag: '三防一体式任务控制终端', cat: '地面站' },
-    { name: 'Aoyue Link Pro 图数链路', tag: '远距离图数一体化 OFDM 加密链路', cat: '链路通信' },
+    { name: '弹射四旋翼', tag: '弹射起飞、四旋翼机动，面向巡检、侦察与应急快速部署', cat: '工业无人机', scene: 'catapult' },
   ];
 
   var shoton = [
-    { title: '电力廊道精细化巡检',  tag: '多旋翼 · 可见光 + 红外双光融合' },
-    { title: '灾后态势快速建模',    tag: '复合翼 · 倾斜摄影' },
-    { title: '城市低空数字化巡查',  tag: '多机协同 · AI 识别' },
-    { title: '农田变量精准喷洒',    tag: '重载平台 · 处方图作业' },
+    { title: '走廊与杆塔快速巡检', tag: '弹射部署 · 可见光 / 红外', scene: 'power' },
+    { title: '应急现场抵近侦察', tag: '快速到位 · 实时回传', scene: 'rescue' },
+    { title: '复杂地形空中勘察', tag: '无跑道起降 · 定点悬停', scene: 'city' },
+    { title: '农林区域巡查作业', tag: '网格航线 · 态势感知', scene: 'farm' },
   ];
 
   var solutions = [
-    { title: '电力巡检',   cat: '能源', summary: '杆塔、金具与绝缘子的常态化精细巡检，融合可见光、红外与三维建模。' },
-    { title: '测绘建模',   cat: '测绘', summary: '免相控倾斜摄影与机载 LiDAR 一体化建模，高精度成果输出。' },
-    { title: '应急救援',   cat: '应急', summary: '侦查、中继、喊话与物资投送协同作业，全流程态势感知。' },
-    { title: '智慧农业',   cat: '农业', summary: '从变量喷洒到长势评估的全周期作业闭环，赋能精准农业。' },
-    { title: '林业防护',   cat: '林业', summary: '红外烟火识别与网格化巡逻航线，构建全天候防护网络。' },
-    { title: '智慧城市',   cat: '城市', summary: '违建识别、交通监测与市容事件主动上报，支撑城市精细化治理。' },
+    { title: '电力巡检方案', cat: '能源', summary: '针对廊道、杆塔与金具巡视，提供弹射快速起飞、抵近拍摄与缺陷复核的作业闭环。', offer: ['弹射部署，山地与狭窄场地可作业', '可见光 / 红外载荷巡视', '航线规划与成果整理支持'], scene: 'power' },
+    { title: '应急侦察方案', cat: '应急', summary: '灾害或突发事件现场，以弹射四旋翼快速升空，完成态势侦察与画面回传。', offer: ['分钟级展开，无需跑道', '悬停观察与绕飞勘察', '现场指挥协同作业建议'], scene: 'rescue' },
+    { title: '测绘勘察方案', cat: '测绘', summary: '面向区域勘察与补测，提供空中取证、影像采集与后续建模衔接能力。', offer: ['无跑道场地灵活起飞', '定点、航带采集', '数据导出与建模流程对接'], scene: 'city' },
+    { title: '农林巡查方案', cat: '农林', summary: '用于林区、农田与保护区的常态巡查，发现火情、病虫害或边界异常。', offer: ['网格化航线巡查', '红外辅助识别', '巡查记录可追溯'], scene: 'forest' },
+    { title: '城市治理方案', cat: '城市', summary: '服务园区、工地与市政巡查，完成高处观察、违建线索与现场取证。', offer: ['快速抵近观察', '画面取证与回传', '与现有指挥流程衔接'], scene: 'urban' },
+    { title: '定制行业方案', cat: '集成', summary: '按您的场地、载荷与指挥流程，把弹射四旋翼嵌入现有作业体系。', offer: ['场景调研与方案设计', '载荷与流程适配', '培训、演练与售后支持'], scene: 'link' },
   ];
 
   var payloads = [
-    { title: '飞控系统', desc: '双冗余 IMU、AI 协处理器与毫秒级故障切换，保障飞行安全。' },
-    { title: '吊舱与载荷', desc: '可见光、红外、多光谱与激光雷达多模态载荷灵活组合。' },
-    { title: '图数链路', desc: '自研 OFDM 远距图数一体链路，端到端加密传输。' },
-    { title: '地面站', desc: '便携三防与机柜指挥席多形态适配，满足不同作业规模。' },
-    { title: '动力能源', desc: '高能量密度智能电池与混合动力系统，支撑长航时作业。' },
-    { title: '数据平台', desc: '航线规划、数据治理与 AI 识别服务一体化运营。' },
+    { title: '弹射起飞', desc: '无需跑道，在山地、岸边、车载等受限场地快速升空。' },
+    { title: '四旋翼机动', desc: '具备悬停、绕飞与精准抵近能力，适合巡检与侦察。' },
+    { title: '行业载荷', desc: '可按任务挂载可见光、红外等侦察巡视载荷。' },
+    { title: '方案交付', desc: '从航线、作业规范到培训售后，按场景整包落地。' },
   ];
 
-  var navSections = ['home', 'products', 'solutions', 'payloads', 'about', 'contact'];
+  var navSections = ['home', 'solutions', 'products', 'about', 'contact'];
 
   /* ============================================================
    *  security/csrf  CSRF Token 管理
@@ -420,9 +413,21 @@
   function setupReveal() {
     var targets = $$('.reveal, .section-title');
     if (!targets.length) return;
-    // 立即加 .in 防止任何异常导致首屏空白
-    targets.forEach(function (el) { el.classList.add('in'); });
-    if (!('IntersectionObserver' in window)) return;
+    targets.forEach(function (el, i) {
+      if (el.closest && el.closest('.hero')) {
+        el.classList.add('in');
+        return;
+      }
+      el.style.setProperty('--reveal-delay', (i % 6) * 70 + 'ms');
+    });
+    var fallback = window.setTimeout(function () {
+      targets.forEach(function (el) { el.classList.add('in'); });
+    }, 1800);
+    if (!('IntersectionObserver' in window)) {
+      targets.forEach(function (el) { el.classList.add('in'); });
+      window.clearTimeout(fallback);
+      return;
+    }
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
@@ -430,8 +435,32 @@
           io.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.14, rootMargin: '0px 0px -8% 0px' });
     targets.forEach(function (el) { io.observe(el); });
+  }
+
+  function setupMotion() {
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var visual = document.querySelector('.hero-visual');
+    var aurora = document.querySelector('.hero .aurora');
+    if (visual && window.matchMedia('(pointer: fine)').matches) {
+      var raf = 0, tx = 0, ty = 0;
+      window.addEventListener('pointermove', function (e) {
+        tx = (e.clientX / window.innerWidth - 0.5) * 18;
+        ty = (e.clientY / window.innerHeight - 0.5) * 12;
+        if (!raf) {
+          raf = requestAnimationFrame(function () {
+            visual.style.transform = 'translate3d(' + tx + 'px,' + ty + 'px,0)';
+            raf = 0;
+          });
+        }
+      }, { passive: true });
+    }
+    if (aurora) {
+      window.addEventListener('scroll', function () {
+        aurora.style.transform = 'translate3d(0,' + (window.scrollY * 0.12) + 'px,0)';
+      }, { passive: true });
+    }
   }
 
   /* ============================================================
@@ -464,6 +493,37 @@
    * ============================================================ */
   var ARROW_SVG = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>';
 
+  function cinematicScene(kind) {
+    var skies = {
+      hex: ['#08131f', '#02050a'], vtol: ['#0c1824', '#05080e'], ag: ['#10240f', '#071107'],
+      fc: ['#10131c', '#05060a'], gcs: ['#14110c', '#070605'], link: ['#0d1220', '#05060c'],
+      power: ['#1a1408', '#07050a'], rescue: ['#1a0c0c', '#080404'], city: ['#0b1220', '#05070c'],
+      farm: ['#10240f', '#071107'], forest: ['#0c1a14', '#040807'], urban: ['#12151c', '#06070a'],
+      catapult: ['#0b1420', '#03060b']
+    };
+    var accents = {
+      hex: '#00d4ff', vtol: '#5e9cff', ag: '#7dffb2', fc: '#00d4ff', gcs: '#ffcf7a', link: '#8b7dff',
+      power: '#ffb347', rescue: '#ff6b6b', city: '#6ecbff', farm: '#9dffb0', forest: '#62d6a8', urban: '#c9d4e8',
+      catapult: '#7fd9ff'
+    };
+    var grounds = { power: '#2a2214', rescue: '#241010', city: '#121820', farm: '#1a2a14', forest: '#102018', urban: '#1a1e26', catapult: '#121820' };
+    var k = kind && skies[kind] ? kind : 'hex';
+    var sky = skies[k];
+    var accent = accents[k];
+    var art = (k === 'catapult')
+      ? '<g><rect x="80" y="368" width="420" height="14" rx="4" fill="#8a94a6"/><path d="M90 368 L470 330" stroke="#c5ccd8" stroke-width="6" stroke-linecap="round"/></g><g transform="translate(520 220) rotate(-18)"><g fill="none" stroke="#d7dde8" stroke-width="3"><rect x="-40" y="-12" width="80" height="24" rx="8"/><path d="M-40 0L-108 -52M-40 0L-108 52M40 0L108 -52M40 0L108 52"/></g><circle cx="-108" cy="-52" r="18" fill="#0b1018" stroke="#7fd9ff" stroke-width="2"/><circle cx="-108" cy="52" r="18" fill="#0b1018" stroke="#7fd9ff" stroke-width="2"/><circle cx="108" cy="-52" r="18" fill="#0b1018" stroke="#7fd9ff" stroke-width="2"/><circle cx="108" cy="52" r="18" fill="#0b1018" stroke="#7fd9ff" stroke-width="2"/></g>'
+      : (k === 'vtol' || k === 'rescue' || k === 'urban')
+      ? '<g transform="translate(400 250)"><ellipse cx="0" cy="8" rx="210" ry="18" fill="#9aa3b5"/><rect x="-90" y="-14" width="180" height="28" rx="8" fill="#d7dde8"/><circle cx="-70" cy="-36" r="16" fill="#0b1018" stroke="#7fd9ff" stroke-width="2"/><circle cx="70" cy="-36" r="16" fill="#0b1018" stroke="#7fd9ff" stroke-width="2"/><circle cx="-70" cy="36" r="16" fill="#0b1018" stroke="#7fd9ff" stroke-width="2"/><circle cx="70" cy="36" r="16" fill="#0b1018" stroke="#7fd9ff" stroke-width="2"/></g>'
+      : (k === 'ag' || k === 'farm')
+        ? '<g transform="translate(400 248)"><rect x="-70" y="-18" width="140" height="36" rx="12" fill="#d5dbe6"/><path d="M-70 0L-160 -50M-70 0L-160 50M70 0L160 -50M70 0L160 50" fill="none" stroke="#c5ccd8" stroke-width="8" stroke-linecap="round"/><circle cx="-160" cy="-50" r="22" fill="#10141c" stroke="#9be7ff" stroke-width="2"/><circle cx="-160" cy="50" r="22" fill="#10141c" stroke="#9be7ff" stroke-width="2"/><circle cx="160" cy="-50" r="22" fill="#10141c" stroke="#9be7ff" stroke-width="2"/><circle cx="160" cy="50" r="22" fill="#10141c" stroke="#9be7ff" stroke-width="2"/></g>'
+        : (k === 'fc' || k === 'gcs' || k === 'link')
+          ? '<g transform="translate(400 250)"><rect x="-110" y="-70" width="220" height="140" rx="16" fill="#121821" stroke="#7fd9ff" stroke-width="2"/><rect x="-92" y="-52" width="184" height="88" rx="8" fill="#071018"/><path d="M-70 -10h40M-20 -10h90" stroke="#00d4ff" stroke-width="3" opacity="0.8"/></g>'
+          : '<g transform="translate(400 250)"><g fill="none" stroke="#cfd6e4" stroke-width="3" stroke-linecap="round"><rect x="-52" y="-16" width="104" height="32" rx="10"/><path d="M-52 0L-140 -72M-52 0L-140 72M52 0L140 -72M52 0L140 72"/></g><circle cx="-140" cy="-72" r="26" fill="#0b1018" stroke="#7fd9ff" stroke-width="2"/><circle cx="-140" cy="72" r="26" fill="#0b1018" stroke="#7fd9ff" stroke-width="2"/><circle cx="140" cy="-72" r="26" fill="#0b1018" stroke="#7fd9ff" stroke-width="2"/><circle cx="140" cy="72" r="26" fill="#0b1018" stroke="#7fd9ff" stroke-width="2"/><ellipse cx="0" cy="6" rx="18" ry="8" fill="#00d4ff" opacity="0.85"/></g>';
+    var ground = grounds[k] ? '<rect y="360" width="800" height="140" fill="' + grounds[k] + '" opacity="0.85"/>' : '';
+    var markup = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="sky' + k + '" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="' + sky[0] + '"/><stop offset="100%" stop-color="' + sky[1] + '"/></linearGradient><radialGradient id="glow' + k + '" cx="50%" cy="42%" r="48%"><stop offset="0%" stop-color="' + accent + '" stop-opacity="0.42"/><stop offset="70%" stop-color="' + accent + '" stop-opacity="0"/></radialGradient></defs><rect width="800" height="500" fill="url(#sky' + k + ')"/><rect width="800" height="500" fill="url(#glow' + k + ')"/>' + ground + '<ellipse cx="400" cy="390" rx="220" ry="18" fill="#000" opacity="0.35"/>' + art + '</svg>';
+    return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(markup);
+  }
+
   function renderMarquee() {
     var track = $('#marquee');
     if (!track) return;
@@ -482,10 +542,15 @@
   function renderProducts() {
     var root = $('#carousel');
     if (!root) return;
+    var href = /\/pages\//.test(location.pathname) ? 'products.html' : 'pages/products.html';
+    root.classList.toggle('is-solo', products.length === 1);
     root.innerHTML = products.map(function (p) {
       return [
-        '<a class="product-card" href="#payloads">',
-        '  <div class="media"><span class="card-tag">' + esc(p.cat) + '</span></div>',
+        '<a class="product-card' + (products.length === 1 ? ' product-feature' : '') + '" href="' + href + '">',
+        '  <div class="media">',
+        '    <img src="' + cinematicScene(p.scene) + '" alt="' + esc(p.name) + '" width="800" height="500" loading="lazy" decoding="async" />',
+        '    <span class="card-tag">' + esc(p.cat) + '</span>',
+        '  </div>',
         '  <div class="body">',
         '    <div>',
         '      <div class="name">' + esc(p.name) + '</div>',
@@ -512,7 +577,10 @@
     root.innerHTML = shoton.map(function (item) {
       return [
         '<a class="card" href="#solutions">',
-        '  <div class="card-media"><span class="card-tag">Shot on Aoyue</span></div>',
+        '  <div class="card-media shot">',
+        '    <img src="' + cinematicScene(item.scene) + '" alt="' + esc(item.title) + '" width="800" height="500" loading="lazy" decoding="async" />',
+        '    <span class="card-tag">作业场景</span>',
+        '  </div>',
         '  <div class="card-body">',
         '    <span style="font-size:11px;letter-spacing:.4em;color:var(--brand-cyan);text-transform:uppercase">' + esc(item.tag) + '</span>',
         '    <h3 style="font-family:Manrope;font-size:22px;color:#fff;margin:6px 0 0">' + esc(item.title) + '</h3>',
@@ -529,10 +597,16 @@
     root.innerHTML = solutions.map(function (s) {
       return [
         '<a class="card" href="#contact">',
-        '  <div class="card-media"><span class="card-tag">' + esc(s.cat) + '</span></div>',
+        '  <div class="card-media scene">',
+        '    <img src="' + cinematicScene(s.scene) + '" alt="' + esc(s.title) + '" width="800" height="500" loading="lazy" decoding="async" />',
+        '    <span class="card-tag">' + esc(s.cat) + '</span>',
+        '  </div>',
         '  <div class="card-body">',
         '    <h3 style="font-family:Manrope;font-size:22px;color:#fff;margin:0">' + esc(s.title) + '</h3>',
         '    <p style="margin:6px 0 0;color:var(--haze-300);font-size:14px;line-height:1.6">' + esc(s.summary) + '</p>',
+        (s.offer && s.offer.length
+          ? '<ul class="offer-list">' + s.offer.map(function (item) { return '<li>' + esc(item) + '</li>'; }).join('') + '</ul>'
+          : ''),
         '  </div>',
         '</a>',
       ].join('');
@@ -556,6 +630,21 @@
   function renderCompanyQualification() {
     var node = $('#qualification');
     if (node) node.textContent = company.qualification;
+  }
+
+  function hydrateProductVisuals() {
+    $$('[data-scene]').forEach(function (el) {
+      if (el.querySelector('img.scene-art')) return;
+      var img = document.createElement('img');
+      img.className = 'scene-art';
+      img.src = cinematicScene(el.getAttribute('data-scene'));
+      img.alt = el.getAttribute('data-alt') || '';
+      img.width = 800;
+      img.height = 500;
+      img.decoding = 'async';
+      img.loading = 'lazy';
+      el.insertBefore(img, el.firstChild);
+    });
   }
 
   /* ============================================================
@@ -721,6 +810,7 @@
       renderShotOn,
       renderSolutions,
       renderPayloads,
+      hydrateProductVisuals,
     ].forEach(function (fn) {
       try { fn(); } catch (e) { console.error('[aoyue] render', fn.name, e); }
     });
@@ -728,6 +818,7 @@
     // 行为类
     [
       setupNav,
+      setupMotion,
       setupCounters,
       setupForms,
       injectStructuredData,

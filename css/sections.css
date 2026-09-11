@@ -57,7 +57,7 @@ section { position: relative; }
   padding: 12px;
   box-shadow: var(--shadow-glow);
 }
-.hero-visual img { aspect-ratio: 4 / 3; width: 100%; border-radius: 20px; object-fit: cover; }
+.hero-visual img { aspect-ratio: 4 / 3; width: 100%; border-radius: 20px; object-fit: contain; background: transparent; }
 .hero-visual .badge {
   position: absolute;
   bottom: 24px;

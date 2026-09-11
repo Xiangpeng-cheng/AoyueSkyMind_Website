@@ -1,18 +1,14 @@
 /* =============================================================
    data/content.js  站点文案与数据
-   - 所有面向用户的内容统一在此维护，便于内容审核与版本管理
-   - 已清理过时/未经核实信息：删除具体客户名 / 奖项 / 投产日期等
    ============================================================= */
 
 export const company = {
   name: '武汉翱越智控科技有限公司',
   shortName: '武汉翱越智控',
   brand: 'Aoyue SkyMind',
-  tagline: '智能飞行 · 精准控制 · 为低空生产力而生',
+  tagline: '以弹射四旋翼为作业平台，为行业提供可落地的低空解决方案',
   email: 'contact@aoyue-uav.com',
   hours: '周一至周五 09:00 - 18:00',
-  // 资质表述口径：仅说明已通过质量管理体系认证，
-  // 具体资质以登记机关与官网公示为准
   qualification: '公司具备质量管理体系认证及行业相关资质（具体资质以官网公示与登记机关信息为准）',
 };
 
@@ -28,46 +24,79 @@ export const partners = [
 ];
 
 export const products = [
-  { name: 'Aoyue M500 长续航多旋翼', tag: '面向巡检、应急、测绘的旗舰六旋翼平台', cat: '工业无人机' },
-  { name: 'Aoyue X12 复合翼',         tag: '融合多旋翼起降与固定翼长航时', cat: '工业无人机' },
-  { name: 'Aoyue T70 重载平台',        tag: '面向植保与中短途物流的大载重平台', cat: '工业无人机' },
-  { name: 'SkyMind FC-X 飞控',         tag: '双冗余 IMU 与 AI 协处理', cat: '飞控载荷' },
-  { name: 'Aoyue G200 地面站',         tag: '便携三防一体式任务控制站', cat: '地面站' },
-  { name: 'Aoyue Link Pro 链路',       tag: '远距离图数一体 OFDM 链路', cat: '链路通信' },
+  {
+    name: '弹射四旋翼',
+    tag: '弹射起飞、四旋翼机动，面向巡检、侦察与应急快速部署',
+    cat: '工业无人机',
+    scene: 'catapult',
+  },
 ];
 
 export const shoton = [
-  { title: '电力廊道精细化巡检',  tag: '多旋翼 · 可见光 + 红外' },
-  { title: '灾后态势快速建模',    tag: '复合翼 · 倾斜摄影' },
-  { title: '城市低空数字化巡查',  tag: '多机协同 · AI 识别' },
-  { title: '农田变量喷洒作业',    tag: '重载平台 · 处方图' },
+  { title: '走廊与杆塔快速巡检', tag: '弹射部署 · 可见光 / 红外', scene: 'power' },
+  { title: '应急现场抵近侦察', tag: '快速到位 · 实时回传', scene: 'rescue' },
+  { title: '复杂地形空中勘察', tag: '无跑道起降 · 定点悬停', scene: 'city' },
+  { title: '农林区域巡查作业', tag: '网格航线 · 态势感知', scene: 'farm' },
 ];
 
 export const solutions = [
-  { title: '电力巡检',   cat: '能源', summary: '杆塔、金具与绝缘子的常态化精细巡检' },
-  { title: '测绘建模',   cat: '测绘', summary: '免相控倾斜摄影与机载 LiDAR 一体化建模' },
-  { title: '应急救援',   cat: '应急', summary: '侦查、中继、喊话与物资投送协同作业' },
-  { title: '智慧农业',   cat: '农业', summary: '从变量喷洒到长势评估的全周期作业' },
-  { title: '林业防护',   cat: '林业', summary: '红外烟火识别与网格化巡逻航线' },
-  { title: '智慧城市',   cat: '城市', summary: '违建识别、交通监测与市容事件主动上报' },
+  {
+    title: '电力巡检方案',
+    cat: '能源',
+    summary: '针对廊道、杆塔与金具巡视，提供弹射快速起飞、抵近拍摄与缺陷复核的作业闭环。',
+    offer: ['弹射部署，山地与狭窄场地可作业', '可见光 / 红外载荷巡视', '航线规划与成果整理支持'],
+    scene: 'power',
+  },
+  {
+    title: '应急侦察方案',
+    cat: '应急',
+    summary: '灾害或突发事件现场，以弹射四旋翼快速升空，完成态势侦察与画面回传。',
+    offer: ['分钟级展开，无需跑道', '悬停观察与绕飞勘察', '现场指挥协同作业建议'],
+    scene: 'rescue',
+  },
+  {
+    title: '测绘勘察方案',
+    cat: '测绘',
+    summary: '面向区域勘察与补测，提供空中取证、影像采集与后续建模衔接能力。',
+    offer: ['无跑道场地灵活起飞', '定点、航带采集', '数据导出与建模流程对接'],
+    scene: 'city',
+  },
+  {
+    title: '农林巡查方案',
+    cat: '农林',
+    summary: '用于林区、农田与保护区的常态巡查，发现火情、病虫害或边界异常。',
+    offer: ['网格化航线巡查', '红外辅助识别', '巡查记录可追溯'],
+    scene: 'forest',
+  },
+  {
+    title: '城市治理方案',
+    cat: '城市',
+    summary: '服务园区、工地与市政巡查，完成高处观察、违建线索与现场取证。',
+    offer: ['快速抵近观察', '画面取证与回传', '与现有指挥流程衔接'],
+    scene: 'urban',
+  },
+  {
+    title: '定制行业方案',
+    cat: '集成',
+    summary: '按您的场地、载荷与指挥流程，把弹射四旋翼嵌入现有作业体系。',
+    offer: ['场景调研与方案设计', '载荷与流程适配', '培训、演练与售后支持'],
+    scene: 'link',
+  },
 ];
 
 export const payloads = [
-  { title: '飞控系统', desc: '双冗余 IMU、AI 协处理与毫秒级故障切换' },
-  { title: '吊舱与载荷', desc: '可见光、红外、多光谱、激光雷达多模态' },
-  { title: '图数链路', desc: '自研 OFDM 远距图数一体，端到端加密' },
-  { title: '地面站', desc: '便携三防与机柜指挥席多形态' },
-  { title: '动力能源', desc: '高能量密度智能电池与混合动力系统' },
-  { title: '数据平台', desc: '航线规划、数据治理与 AI 识别服务' },
+  { title: '弹射起飞', desc: '无需跑道，在山地、岸边、车载等受限场地快速升空。' },
+  { title: '四旋翼机动', desc: '具备悬停、绕飞与精准抵近能力，适合巡检与侦察。' },
+  { title: '行业载荷', desc: '可按任务挂载可见光、红外等侦察巡视载荷。' },
+  { title: '方案交付', desc: '从航线、作业规范到培训售后，按场景整包落地。' },
 ];
 
-export const navSections = ['home', 'products', 'solutions', 'payloads', 'about', 'contact'];
+export const navSections = ['home', 'solutions', 'products', 'about', 'contact'];
 
 export const navLinks = [
-  { id: 'home',     label: '首页' },
-  { id: 'products', label: '产品中心' },
-  { id: 'solutions', label: '行业方案' },
-  { id: 'payloads', label: '飞控与载荷' },
-  { id: 'about',    label: '关于我们' },
-  { id: 'contact',  label: '联系我们' },
+  { id: 'home', label: '首页' },
+  { id: 'solutions', label: '解决方案' },
+  { id: 'products', label: '产品' },
+  { id: 'about', label: '关于我们' },
+  { id: 'contact', label: '联系我们' },
 ];

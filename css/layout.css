@@ -35,8 +35,8 @@
 .nav.scrolled .nav-inner { height: 56px; }
 
 .brand { display: flex; align-items: center; gap: 12px; }
-.brand img { width: 120px; height: 120px; border-radius: var(--radius-sm); transition: all var(--dur-base) var(--ease-out); background: transparent; }
-.nav.scrolled .brand img { width: 96px; height: 96px; }
+.brand img { width: 40px; height: 40px; border-radius: var(--radius-sm); transition: all var(--dur-base) var(--ease-out); background: transparent; object-fit: contain; }
+.nav.scrolled .brand img { width: 32px; height: 32px; }
 .brand-name { font-family: var(--font-display); font-size: 14px; font-weight: 600; letter-spacing: 0.02em; }
 .brand-sub { font-size: 11px; letter-spacing: 0.3em; color: var(--haze-300); text-transform: uppercase; }
 
@@ -197,8 +197,8 @@
   .footer-grid { padding: 40px 0; gap: 32px; }
   .subscribe-box { padding: 20px; }
   /* 移动端 logo 保持 80px 不致破版 */
-  .brand img { width: 80px; height: 80px; }
-  .nav.scrolled .brand img { width: 64px; height: 64px; }
+  .brand img { width: 36px; height: 36px; }
+  .nav.scrolled .brand img { width: 30px; height: 30px; }
 }
 
 /* 触屏设备：触摸目标 ≥44px（WCAG 推荐），关闭 hover 缩放 */

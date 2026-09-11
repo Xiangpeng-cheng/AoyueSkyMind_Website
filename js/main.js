@@ -6,6 +6,7 @@
 import { $ } from './utils/dom.js';
 import { setupNav } from './services/nav.js';
 import { setupReveal } from './services/reveal.js';
+import { setupMotion } from './services/motion.js';
 import { setupCounters } from './services/counter.js';
 import {
   renderMarquee,
@@ -14,6 +15,7 @@ import {
   renderSolutions,
   renderPayloads,
   renderCompanyQualification,
+  hydrateProductVisuals,
 } from './services/render.js';
 import { setupForms } from './services/form.js';
 import { injectStructuredData } from './services/structured-data.js';
@@ -33,6 +35,7 @@ function boot() {
     renderShotOn,
     renderSolutions,
     renderPayloads,
+    hydrateProductVisuals,
   ].forEach(function (fn) {
     try { fn(); } catch (e) { console.error('[aoyue] render', fn.name, e); }
   });
@@ -40,6 +43,7 @@ function boot() {
   // 行为类：单个失败不应影响整体
   [
     setupNav,
+    setupMotion,
     setupCounters,
     setupForms,
     injectStructuredData,
