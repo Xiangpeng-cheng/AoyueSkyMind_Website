@@ -146,10 +146,10 @@
     name: '武汉翱越智控科技有限公司',
     shortName: '武汉翱越智控',
     brand: 'Aoyue SkyMind',
-    tagline: '智能飞行 · 精准控制 · 为低空生产力而生',
+    tagline: '以工业无人机与行业方案，为低空现场提供可落地的作业能力',
     email: 'contact@aoyue-uav.com',
     hours: '周一至周五 09:00 - 18:00',
-    qualification: '公司已通过质量管理体系认证并取得行业相关资质，具体信息以登记机关与官方网站公示为准。',
+    qualification: '公司具备质量管理体系认证及行业相关资质（具体资质以官网公示与登记机关信息为准）',
   };
 
   var partners = [
@@ -164,30 +164,31 @@
   ];
 
   var products = [
-    { name: '弹射四旋翼', tag: '弹射起飞、四旋翼机动，面向巡检、侦察与应急快速部署', cat: '工业无人机', scene: 'catapult' },
+    { id: 'catapult', name: '弹射四旋翼', tag: '弹射起飞、四旋翼机动，面向巡检、侦察与应急快速部署', cat: '工业无人机', scene: 'catapult' },
+    { name: '后续型号', tag: '将按巡检、侦察、勘察等任务继续补充作业平台，产品中心会同步更新。', cat: '即将发布', scene: 'link', comingSoon: true },
   ];
 
   var shoton = [
-    { title: '走廊与杆塔快速巡检', tag: '弹射部署 · 可见光 / 红外', scene: 'power' },
-    { title: '应急现场抵近侦察', tag: '快速到位 · 实时回传', scene: 'rescue' },
-    { title: '复杂地形空中勘察', tag: '无跑道起降 · 定点悬停', scene: 'city' },
-    { title: '农林区域巡查作业', tag: '网格航线 · 态势感知', scene: 'farm' },
+    { title: '走廊与杆塔快速巡检', tag: '弹射部署 · 可见光 / 红外', scene: 'power', desc: '在山地廊道或杆塔周边展开：弹射升空后绕飞、悬停，把通道、金具与发热点拍清楚，再带回可复核的影像。' },
+    { title: '应急现场抵近侦察', tag: '快速到位 · 实时回传', scene: 'rescue', desc: '灾害或突发事件往往没有跑道。车载或岸边弹射后，尽快给出一线视角，供指挥判断进出路线与风险点。' },
+    { title: '复杂地形空中勘察', tag: '无跑道起降 · 定点悬停', scene: 'city', desc: '补测、选址与工点勘察时，用定点观察和航带采集补齐地面走不到、看不全的位置，并与后续建模流程衔接。' },
+    { title: '农林区域巡查作业', tag: '网格航线 · 态势感知', scene: 'farm', desc: '按网格巡查林区、农田与保护区，结合可见光与红外，发现火情、异常长势或边界变化，留下可追溯记录。' },
   ];
 
   var solutions = [
-    { title: '电力巡检方案', cat: '能源', summary: '针对廊道、杆塔与金具巡视，提供弹射快速起飞、抵近拍摄与缺陷复核的作业闭环。', offer: ['弹射部署，山地与狭窄场地可作业', '可见光 / 红外载荷巡视', '航线规划与成果整理支持'], scene: 'power' },
-    { title: '应急侦察方案', cat: '应急', summary: '灾害或突发事件现场，以弹射四旋翼快速升空，完成态势侦察与画面回传。', offer: ['分钟级展开，无需跑道', '悬停观察与绕飞勘察', '现场指挥协同作业建议'], scene: 'rescue' },
-    { title: '测绘勘察方案', cat: '测绘', summary: '面向区域勘察与补测，提供空中取证、影像采集与后续建模衔接能力。', offer: ['无跑道场地灵活起飞', '定点、航带采集', '数据导出与建模流程对接'], scene: 'city' },
-    { title: '农林巡查方案', cat: '农林', summary: '用于林区、农田与保护区的常态巡查，发现火情、病虫害或边界异常。', offer: ['网格化航线巡查', '红外辅助识别', '巡查记录可追溯'], scene: 'forest' },
-    { title: '城市治理方案', cat: '城市', summary: '服务园区、工地与市政巡查，完成高处观察、违建线索与现场取证。', offer: ['快速抵近观察', '画面取证与回传', '与现有指挥流程衔接'], scene: 'urban' },
-    { title: '定制行业方案', cat: '集成', summary: '按您的场地、载荷与指挥流程，把弹射四旋翼嵌入现有作业体系。', offer: ['场景调研与方案设计', '载荷与流程适配', '培训、演练与售后支持'], scene: 'link' },
+    { id: 'power', title: '电力巡检方案', cat: '能源', summary: '针对廊道、杆塔与金具巡视，把弹射起飞、抵近拍摄和缺陷复核串成一次可执行的现场作业。', offer: ['山地、岸边、车载等受限场地可弹射部署', '可见光 / 红外载荷巡视', '航线规划、分段作业与成果整理支持'], scene: 'power' },
+    { id: 'rescue', title: '应急侦察方案', cat: '应急', summary: '突发事件现场快速升空，完成态势侦察与画面回传，给指挥一个能看的一线视角。', offer: ['无需跑道，强调展开速度', '悬停观察与绕飞勘察', '与现场指挥协同的作业建议'], scene: 'rescue' },
+    { id: 'survey', title: '测绘勘察方案', cat: '测绘', summary: '面向区域勘察与补测，提供空中取证、影像采集，并与后续建模、内业流程对接。', offer: ['无跑道场地灵活起飞', '定点、航带采集', '数据导出与建模流程对接'], scene: 'city' },
+    { id: 'agri', title: '农林巡查方案', cat: '农林', summary: '用于林区、农田与保护区的常态巡查，发现火情、病虫害迹象或边界异常，并留下可追溯记录。', offer: ['网格化航线巡查', '红外辅助识别热点', '巡查记录可追溯'], scene: 'forest' },
+    { id: 'city', title: '城市治理方案', cat: '城市', summary: '服务园区、工地与市政巡查，完成高处观察、违建线索与现场取证，并接入现有指挥流程。', offer: ['快速抵近观察', '画面取证与回传', '与现有指挥、上报流程衔接'], scene: 'urban' },
+    { id: 'custom', title: '定制行业方案', cat: '集成', summary: '按您的场地、载荷与指挥流程，把合适的飞行平台嵌进现有作业体系，而不是另给一套空泛目录。', offer: ['场景调研与方案设计', '载荷与流程适配', '培训、演练与售后支持'], scene: 'link' },
   ];
 
   var payloads = [
-    { title: '弹射起飞', desc: '无需跑道，在山地、岸边、车载等受限场地快速升空。' },
-    { title: '四旋翼机动', desc: '具备悬停、绕飞与精准抵近能力，适合巡检与侦察。' },
-    { title: '行业载荷', desc: '可按任务挂载可见光、红外等侦察巡视载荷。' },
-    { title: '方案交付', desc: '从航线、作业规范到培训售后，按场景整包落地。' },
+    { title: '快速部署', desc: '按场地选择起飞方式。受限场地可用弹射等手段展开，不把机场当成先决条件。' },
+    { title: '机动作业', desc: '悬停、绕飞、抵近，适合杆塔、现场和点状目标，而不是一掠而过的航线飞越。' },
+    { title: '行业载荷', desc: '按任务挂载可见光、红外等巡视侦察载荷，先对齐“要看清什么”，再决定挂什么。' },
+    { title: '方案交付', desc: '航线、作业规范、培训与售后按场景整包，避免只交一台飞机、现场不会用。' },
   ];
 
   var navSections = ['home', 'solutions', 'products', 'about', 'contact'];
@@ -542,11 +543,18 @@
   function renderProducts() {
     var root = $('#carousel');
     if (!root) return;
-    var href = /\/pages\//.test(location.pathname) ? 'products.html' : 'pages/products.html';
+    var base = /\/pages\//.test(location.pathname) ? 'products.html' : 'pages/products.html';
     root.classList.toggle('is-solo', products.length === 1);
     root.innerHTML = products.map(function (p) {
+      var hash = p.id ? '#' + p.id : '';
+      var soon = !!p.comingSoon;
+      var tag = soon ? '即将发布' : '了解详情';
+      var open = soon
+        ? '<article class="product-card is-soon">'
+        : '<a class="product-card' + (products.length === 1 ? ' product-feature' : '') + '" href="' + base + hash + '">';
+      var close = soon ? '</article>' : '</a>';
       return [
-        '<a class="product-card' + (products.length === 1 ? ' product-feature' : '') + '" href="' + href + '">',
+        open,
         '  <div class="media">',
         '    <img src="' + cinematicScene(p.scene) + '" alt="' + esc(p.name) + '" width="800" height="500" loading="lazy" decoding="async" />',
         '    <span class="card-tag">' + esc(p.cat) + '</span>',
@@ -556,9 +564,9 @@
         '      <div class="name">' + esc(p.name) + '</div>',
         '      <div class="tag">' + esc(p.tag) + '</div>',
         '    </div>',
-        '    <div class="footer"><span>了解详情</span><span class="arrow">' + ARROW_SVG + '</span></div>',
+        '    <div class="footer"><span>' + tag + '</span>' + (soon ? '' : '<span class="arrow">' + ARROW_SVG + '</span>') + '</div>',
         '  </div>',
-        '</a>',
+        close,
       ].join('');
     }).join('');
 
@@ -576,7 +584,7 @@
     if (!root) return;
     root.innerHTML = shoton.map(function (item) {
       return [
-        '<a class="card" href="#solutions">',
+        '<a class="card" href="' + (/\/pages\//.test(location.pathname) ? 'solutions.html' : 'pages/solutions.html') + '">',
         '  <div class="card-media shot">',
         '    <img src="' + cinematicScene(item.scene) + '" alt="' + esc(item.title) + '" width="800" height="500" loading="lazy" decoding="async" />',
         '    <span class="card-tag">作业场景</span>',
@@ -584,6 +592,7 @@
         '  <div class="card-body">',
         '    <span style="font-size:11px;letter-spacing:.4em;color:var(--brand-cyan);text-transform:uppercase">' + esc(item.tag) + '</span>',
         '    <h3 style="font-family:Manrope;font-size:22px;color:#fff;margin:6px 0 0">' + esc(item.title) + '</h3>',
+        (item.desc ? '<p class="card-copy">' + esc(item.desc) + '</p>' : ''),
         '    <span class="arrow" style="margin-top:12px">' + ARROW_SVG + '</span>',
         '  </div>',
         '</a>',
@@ -595,8 +604,9 @@
     var root = $('#solutions-grid');
     if (!root) return;
     root.innerHTML = solutions.map(function (s) {
+      var href = (/\/pages\//.test(location.pathname) ? 'solutions.html' : 'pages/solutions.html') + (s.id ? '#' + s.id : '');
       return [
-        '<a class="card" href="#contact">',
+        '<a class="card" href="' + href + '">',
         '  <div class="card-media scene">',
         '    <img src="' + cinematicScene(s.scene) + '" alt="' + esc(s.title) + '" width="800" height="500" loading="lazy" decoding="async" />',
         '    <span class="card-tag">' + esc(s.cat) + '</span>',

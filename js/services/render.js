@@ -9,6 +9,11 @@ import { esc } from '../utils/escape.js';
 import { cinematicScene } from '../utils/scene.js';
 import { partners, products, shoton, solutions, payloads, company } from '../data/content.js';
 
+function solutionHref(id) {
+  const hash = id ? '#' + id : '';
+  return /\/pages\//.test(location.pathname) ? 'solutions.html' + hash : 'pages/solutions.html' + hash;
+}
+
 const ARROW_SVG = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>';
 
 export function renderMarquee() {
@@ -29,11 +34,18 @@ export function renderMarquee() {
 export function renderProducts() {
   const root = $('#carousel');
   if (!root) return;
-  const href = /\/pages\//.test(location.pathname) ? 'products.html' : 'pages/products.html';
+  const base = /\/pages\//.test(location.pathname) ? 'products.html' : 'pages/products.html';
   root.classList.toggle('is-solo', products.length === 1);
   root.innerHTML = products.map(function (p) {
+    const hash = p.id ? '#' + p.id : '';
+    const soon = !!p.comingSoon;
+    const tag = soon ? '即将发布' : '了解详情';
+    const open = soon
+      ? '<article class="product-card is-soon">'
+      : '<a class="product-card' + (products.length === 1 ? ' product-feature' : '') + '" href="' + base + hash + '">';
+    const close = soon ? '</article>' : '</a>';
     return [
-      '<a class="product-card' + (products.length === 1 ? ' product-feature' : '') + '" href="' + href + '">',
+      open,
       '  <div class="media">',
       '    <img src="' + cinematicScene(p.scene) + '" alt="' + esc(p.name) + '" width="800" height="500" loading="lazy" decoding="async" />',
       '    <span class="card-tag">' + esc(p.cat) + '</span>',
@@ -43,9 +55,9 @@ export function renderProducts() {
       '      <div class="name">' + esc(p.name) + '</div>',
       '      <div class="tag">' + esc(p.tag) + '</div>',
       '    </div>',
-      '    <div class="footer"><span>了解详情</span><span class="arrow">' + ARROW_SVG + '</span></div>',
+      '    <div class="footer"><span>' + tag + '</span>' + (soon ? '' : '<span class="arrow">' + ARROW_SVG + '</span>') + '</div>',
       '  </div>',
-      '</a>',
+      close,
     ].join('');
   }).join('');
 
@@ -64,17 +76,18 @@ export function renderShotOn() {
   if (!root) return;
   root.innerHTML = shoton.map(function (item) {
     return [
-      '<a class="card" href="#solutions">',
-      '  <div class="card-media shot">',
-      '    <img src="' + cinematicScene(item.scene) + '" alt="' + esc(item.title) + '" width="800" height="500" loading="lazy" decoding="async" />',
-      '    <span class="card-tag">作业场景</span>',
-      '  </div>',
-      '  <div class="card-body">',
-      '    <span style="font-size:11px;letter-spacing:.4em;color:var(--brand-cyan);text-transform:uppercase">' + esc(item.tag) + '</span>',
-      '    <h3 style="font-family:Manrope;font-size:22px;color:#fff;margin:6px 0 0">' + esc(item.title) + '</h3>',
-      '    <span class="arrow" style="margin-top:12px">' + ARROW_SVG + '</span>',
-      '  </div>',
-      '</a>',
+        '<a class="card" href="' + solutionHref('') + '">',
+        '  <div class="card-media shot">',
+        '    <img src="' + cinematicScene(item.scene) + '" alt="' + esc(item.title) + '" width="800" height="500" loading="lazy" decoding="async" />',
+        '    <span class="card-tag">作业场景</span>',
+        '  </div>',
+        '  <div class="card-body">',
+        '    <span style="font-size:11px;letter-spacing:.4em;color:var(--brand-cyan);text-transform:uppercase">' + esc(item.tag) + '</span>',
+        '    <h3 style="font-family:Manrope;font-size:22px;color:#fff;margin:6px 0 0">' + esc(item.title) + '</h3>',
+        (item.desc ? '<p class="card-copy">' + esc(item.desc) + '</p>' : ''),
+        '    <span class="arrow" style="margin-top:12px">' + ARROW_SVG + '</span>',
+        '  </div>',
+        '</a>',
     ].join('');
   }).join('');
 }
@@ -84,7 +97,7 @@ export function renderSolutions() {
   if (!root) return;
   root.innerHTML = solutions.map(function (s) {
     return [
-      '<a class="card" href="#contact">',
+      '<a class="card" href="' + solutionHref(s.id) + '">',
       '  <div class="card-media scene">',
       '    <img src="' + cinematicScene(s.scene) + '" alt="' + esc(s.title) + '" width="800" height="500" loading="lazy" decoding="async" />',
       '    <span class="card-tag">' + esc(s.cat) + '</span>',
