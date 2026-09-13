@@ -73,5 +73,6 @@ package.json             元信息（scripts 仅作指引）
 - [docs/CHANGELOG.md](docs/CHANGELOG.md) — 变更日志
 
 ## 相关链接
-- [腾讯云](https://www.tencentcloud.com/zh)
+- [腾讯云（中国站）](https://cloud.tencent.com/) — **务必使用中国站**；国际站（`tencentcloud.com`）会把站点资源部署到境外
+- [边缘安全加速平台 EO](https://cloud.tencent.com/product/teo) — 站点接入、加速与安全防护使用 EO 服务
 - [阿里云](https://www.aliyun.com/)
