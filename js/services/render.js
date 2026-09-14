@@ -14,6 +14,14 @@ function solutionHref(id) {
   return /\/pages\//.test(location.pathname) ? 'solutions.html' + hash : 'pages/solutions.html' + hash;
 }
 
+function assetUrl(rel) {
+  return /\/pages\//.test(location.pathname) ? '../' + rel : rel;
+}
+
+function coverSrc(item) {
+  return item.image ? assetUrl(item.image) : cinematicScene(item.scene);
+}
+
 const ARROW_SVG = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>';
 
 export function renderMarquee() {
@@ -46,8 +54,8 @@ export function renderProducts() {
     const close = soon ? '</article>' : '</a>';
     return [
       open,
-      '  <div class="media">',
-      '    <img src="' + cinematicScene(p.scene) + '" alt="' + esc(p.name) + '" width="800" height="500" loading="lazy" decoding="async" />',
+      '  <div class="media' + (p.image ? ' is-photo' : '') + '">',
+      '    <img src="' + coverSrc(p) + '" alt="' + esc(p.name) + '" width="800" height="500" loading="lazy" decoding="async" />',
       '    <span class="card-tag">' + esc(p.cat) + '</span>',
       '  </div>',
       '  <div class="body">',
@@ -78,7 +86,7 @@ export function renderShotOn() {
     return [
         '<a class="card" href="' + solutionHref('') + '">',
         '  <div class="card-media shot">',
-        '    <img src="' + cinematicScene(item.scene) + '" alt="' + esc(item.title) + '" width="800" height="500" loading="lazy" decoding="async" />',
+        '    <img src="' + coverSrc(item) + '" alt="' + esc(item.title) + '" width="800" height="500" loading="lazy" decoding="async" />',
         '    <span class="card-tag">作业场景</span>',
         '  </div>',
         '  <div class="card-body">',
@@ -99,7 +107,7 @@ export function renderSolutions() {
     return [
       '<a class="card" href="' + solutionHref(s.id) + '">',
       '  <div class="card-media scene">',
-      '    <img src="' + cinematicScene(s.scene) + '" alt="' + esc(s.title) + '" width="800" height="500" loading="lazy" decoding="async" />',
+      '    <img src="' + coverSrc(s) + '" alt="' + esc(s.title) + '" width="800" height="500" loading="lazy" decoding="async" />',
       '    <span class="card-tag">' + esc(s.cat) + '</span>',
       '  </div>',
       '  <div class="card-body">',
@@ -138,7 +146,9 @@ export function hydrateProductVisuals() {
     if (el.querySelector('img.scene-art')) return;
     const img = document.createElement('img');
     img.className = 'scene-art';
-    img.src = cinematicScene(el.getAttribute('data-scene'));
+    img.src = el.getAttribute('data-image')
+      ? (/\/pages\//.test(location.pathname) ? '../' : '') + el.getAttribute('data-image')
+      : cinematicScene(el.getAttribute('data-scene'));
     img.alt = el.getAttribute('data-alt') || '';
     img.width = 800;
     img.height = 500;

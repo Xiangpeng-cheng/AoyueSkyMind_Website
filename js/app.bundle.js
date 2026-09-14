@@ -176,19 +176,19 @@
   ];
 
   var shoton = [
-    { title: '走廊与杆塔快速巡检', tag: '弹射部署 · 可见光 / 红外', scene: 'power', desc: '在山地廊道或杆塔周边展开：弹射升空后绕飞、悬停，把通道、金具与发热点拍清楚，再带回可复核的影像。' },
-    { title: '应急现场抵近侦察', tag: '快速到位 · 实时回传', scene: 'rescue', desc: '灾害或突发事件往往没有跑道。车载或岸边弹射后，尽快给出一线视角，供指挥判断进出路线与风险点。' },
-    { title: '复杂地形空中勘察', tag: '无跑道起降 · 定点悬停', scene: 'city', desc: '补测、选址与工点勘察时，用定点观察和航带采集补齐地面走不到、看不全的位置，并与后续建模流程衔接。' },
-    { title: '农林区域巡查作业', tag: '网格航线 · 态势感知', scene: 'farm', desc: '按网格巡查林区、农田与保护区，结合可见光与红外，发现火情、异常长势或边界变化，留下可追溯记录。' },
+    { title: '走廊与杆塔快速巡检', tag: '弹射部署 · 可见光 / 红外', scene: 'power', image: 'assets/img/solutions/power.jpg', desc: '在山地廊道或杆塔周边展开：弹射升空后绕飞、悬停，把通道、金具与发热点拍清楚，再带回可复核的影像。' },
+    { title: '应急现场抵近侦察', tag: '快速到位 · 实时回传', scene: 'rescue', image: 'assets/img/solutions/rescue.jpg', desc: '灾害或突发事件往往没有跑道。车载或岸边弹射后，尽快给出一线视角，供指挥判断进出路线与风险点。' },
+    { title: '复杂地形空中勘察', tag: '无跑道起降 · 定点悬停', scene: 'city', image: 'assets/img/solutions/survey.jpg', desc: '补测、选址与工点勘察时，用定点观察和航带采集补齐地面走不到、看不全的位置，并与后续建模流程衔接。' },
+    { title: '农林区域巡查作业', tag: '网格航线 · 态势感知', scene: 'farm', image: 'assets/img/solutions/agri.jpg', desc: '按网格巡查林区、农田与保护区，结合可见光与红外，发现火情、异常长势或边界变化，留下可追溯记录。' },
   ];
 
   var solutions = [
-    { id: 'power', title: '电力巡检方案', cat: '能源', summary: '针对廊道、杆塔与金具巡视，把弹射起飞、抵近拍摄和缺陷复核串成一次可执行的现场作业。', offer: ['山地、岸边、车载等受限场地可弹射部署', '可见光 / 红外载荷巡视', '航线规划、分段作业与成果整理支持'], scene: 'power' },
-    { id: 'rescue', title: '应急侦察方案', cat: '应急', summary: '突发事件现场快速升空，完成态势侦察与画面回传，给指挥一个能看的一线视角。', offer: ['无需跑道，强调展开速度', '悬停观察与绕飞勘察', '与现场指挥协同的作业建议'], scene: 'rescue' },
-    { id: 'survey', title: '测绘勘察方案', cat: '测绘', summary: '面向区域勘察与补测，提供空中取证、影像采集，并与后续建模、内业流程对接。', offer: ['无跑道场地灵活起飞', '定点、航带采集', '数据导出与建模流程对接'], scene: 'city' },
-    { id: 'agri', title: '农林巡查方案', cat: '农林', summary: '用于林区、农田与保护区的常态巡查，发现火情、病虫害迹象或边界异常，并留下可追溯记录。', offer: ['网格化航线巡查', '红外辅助识别热点', '巡查记录可追溯'], scene: 'forest' },
-    { id: 'city', title: '城市治理方案', cat: '城市', summary: '服务园区、工地与市政巡查，完成高处观察、违建线索与现场取证，并接入现有指挥流程。', offer: ['快速抵近观察', '画面取证与回传', '与现有指挥、上报流程衔接'], scene: 'urban' },
-    { id: 'custom', title: '定制行业方案', cat: '集成', summary: '按您的场地、载荷与指挥流程，把合适的飞行平台嵌进现有作业体系，而不是另给一套空泛目录。', offer: ['场景调研与方案设计', '载荷与流程适配', '培训、演练与售后支持'], scene: 'link' },
+    { id: 'power', title: '电力巡检方案', cat: '能源', summary: '针对廊道、杆塔与金具巡视，把弹射起飞、抵近拍摄和缺陷复核串成一次可执行的现场作业。', offer: ['山地、岸边、车载等受限场地可弹射部署', '可见光 / 红外载荷巡视', '航线规划、分段作业与成果整理支持'], scene: 'power', image: 'assets/img/solutions/power.jpg' },
+    { id: 'rescue', title: '应急侦察方案', cat: '应急', summary: '突发事件现场快速升空，完成态势侦察与画面回传，给指挥一个能看的一线视角。', offer: ['无需跑道，强调展开速度', '悬停观察与绕飞勘察', '与现场指挥协同的作业建议'], scene: 'rescue', image: 'assets/img/solutions/rescue.jpg' },
+    { id: 'survey', title: '测绘勘察方案', cat: '测绘', summary: '面向区域勘察与补测，提供空中取证、影像采集，并与后续建模、内业流程对接。', offer: ['无跑道场地灵活起飞', '定点、航带采集', '数据导出与建模流程对接'], scene: 'city', image: 'assets/img/solutions/survey.jpg' },
+    { id: 'agri', title: '农林巡查方案', cat: '农林', summary: '用于林区、农田与保护区的常态巡查，发现火情、病虫害迹象或边界异常，并留下可追溯记录。', offer: ['网格化航线巡查', '红外辅助识别热点', '巡查记录可追溯'], scene: 'forest', image: 'assets/img/solutions/agri.jpg' },
+    { id: 'city', title: '城市治理方案', cat: '城市', summary: '服务园区、工地与市政巡查，完成高处观察、违建线索与现场取证，并接入现有指挥流程。', offer: ['快速抵近观察', '画面取证与回传', '与现有指挥、上报流程衔接'], scene: 'urban', image: 'assets/img/solutions/city.jpg' },
+    { id: 'custom', title: '定制行业方案', cat: '集成', summary: '按您的场地、载荷与指挥流程，把合适的飞行平台嵌进现有作业体系，而不是另给一套空泛目录。', offer: ['场景调研与方案设计', '载荷与流程适配', '培训、演练与售后支持'], scene: 'link', image: 'assets/img/solutions/custom.jpg' },
   ];
 
   var payloads = [
@@ -532,6 +532,14 @@
     return 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(markup);
   }
 
+  function assetUrl(rel) {
+    return /\/pages\//.test(location.pathname) ? '../' + rel : rel;
+  }
+
+  function coverSrc(item) {
+    return item.image ? assetUrl(item.image) : cinematicScene(item.scene);
+  }
+
   function renderMarquee() {
     var track = $('#marquee');
     if (!track) return;
@@ -562,8 +570,8 @@
       var close = soon ? '</article>' : '</a>';
       return [
         open,
-        '  <div class="media">',
-        '    <img src="' + cinematicScene(p.scene) + '" alt="' + esc(p.name) + '" width="800" height="500" loading="lazy" decoding="async" />',
+        '  <div class="media' + (p.image ? ' is-photo' : '') + '">',
+        '    <img src="' + coverSrc(p) + '" alt="' + esc(p.name) + '" width="800" height="500" loading="lazy" decoding="async" />',
         '    <span class="card-tag">' + esc(p.cat) + '</span>',
         '  </div>',
         '  <div class="body">',
@@ -593,7 +601,7 @@
       return [
         '<a class="card" href="' + (/\/pages\//.test(location.pathname) ? 'solutions.html' : 'pages/solutions.html') + '">',
         '  <div class="card-media shot">',
-        '    <img src="' + cinematicScene(item.scene) + '" alt="' + esc(item.title) + '" width="800" height="500" loading="lazy" decoding="async" />',
+        '    <img src="' + coverSrc(item) + '" alt="' + esc(item.title) + '" width="800" height="500" loading="lazy" decoding="async" />',
         '    <span class="card-tag">作业场景</span>',
         '  </div>',
         '  <div class="card-body">',
@@ -615,7 +623,7 @@
       return [
         '<a class="card" href="' + href + '">',
         '  <div class="card-media scene">',
-        '    <img src="' + cinematicScene(s.scene) + '" alt="' + esc(s.title) + '" width="800" height="500" loading="lazy" decoding="async" />',
+        '    <img src="' + coverSrc(s) + '" alt="' + esc(s.title) + '" width="800" height="500" loading="lazy" decoding="async" />',
         '    <span class="card-tag">' + esc(s.cat) + '</span>',
         '  </div>',
         '  <div class="card-body">',
@@ -654,7 +662,9 @@
       if (el.querySelector('img.scene-art')) return;
       var img = document.createElement('img');
       img.className = 'scene-art';
-      img.src = cinematicScene(el.getAttribute('data-scene'));
+      img.src = el.getAttribute('data-image')
+        ? (/\/pages\//.test(location.pathname) ? '../' : '') + el.getAttribute('data-image')
+        : cinematicScene(el.getAttribute('data-scene'));
       img.alt = el.getAttribute('data-alt') || '';
       img.width = 800;
       img.height = 500;

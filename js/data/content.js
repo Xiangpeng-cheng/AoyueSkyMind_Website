@@ -45,24 +45,28 @@ export const shoton = [
     title: '走廊与杆塔快速巡检',
     tag: '弹射部署 · 可见光 / 红外',
     scene: 'power',
+    image: 'assets/img/solutions/power.jpg',
     desc: '在山地廊道或杆塔周边展开：弹射升空后绕飞、悬停，把通道、金具与发热点拍清楚，再带回可复核的影像。',
   },
   {
     title: '应急现场抵近侦察',
     tag: '快速到位 · 实时回传',
     scene: 'rescue',
+    image: 'assets/img/solutions/rescue.jpg',
     desc: '灾害或突发事件往往没有跑道。车载或岸边弹射后，尽快给出一线视角，供指挥判断进出路线与风险点。',
   },
   {
     title: '复杂地形空中勘察',
     tag: '无跑道起降 · 定点悬停',
     scene: 'city',
+    image: 'assets/img/solutions/survey.jpg',
     desc: '补测、选址与工点勘察时，用定点观察和航带采集补齐地面走不到、看不全的位置，并与后续建模流程衔接。',
   },
   {
     title: '农林区域巡查作业',
     tag: '网格航线 · 态势感知',
     scene: 'farm',
+    image: 'assets/img/solutions/agri.jpg',
     desc: '按网格巡查林区、农田与保护区，结合可见光与红外，发现火情、异常长势或边界变化，留下可追溯记录。',
   },
 ];
@@ -79,6 +83,7 @@ export const solutions = [
     offer: ['山地、岸边、车载等受限场地可弹射部署', '可见光 / 红外载荷巡视', '航线规划、分段作业与成果整理支持'],
     flow: ['确认走廊与杆塔范围', '选定起飞点与载荷', '弹射升空并按段巡视', '标记可疑点并复拍', '整理影像与巡视说明'],
     scene: 'power',
+    image: 'assets/img/solutions/power.jpg',
   },
   {
     id: 'rescue',
@@ -91,6 +96,7 @@ export const solutions = [
     offer: ['无需跑道，强调展开速度', '悬停观察与绕飞勘察', '与现场指挥协同的作业建议'],
     flow: ['到达后判断风向与障碍', '弹射升空建立空中视角', '绕飞掌握全局态势', '对关键点抵近观察', '按指挥要求持续回传'],
     scene: 'rescue',
+    image: 'assets/img/solutions/rescue.jpg',
   },
   {
     id: 'survey',
@@ -103,6 +109,7 @@ export const solutions = [
     offer: ['无跑道场地灵活起飞', '定点、航带采集', '数据导出与建模流程对接'],
     flow: ['明确勘察范围与成果形式', '规划起飞点与航带', '采集可见光影像', '导出并核对覆盖', '对接内业或建模软件'],
     scene: 'city',
+    image: 'assets/img/solutions/survey.jpg',
   },
   {
     id: 'agri',
@@ -115,6 +122,7 @@ export const solutions = [
     offer: ['网格化航线巡查', '红外辅助识别热点', '巡查记录可追溯'],
     flow: ['划定网格与巡查周期', '选择可见光或红外载荷', '按航线巡查并标记异常', '回传或落地复核', '归档本轮巡查记录'],
     scene: 'forest',
+    image: 'assets/img/solutions/agri.jpg',
   },
   {
     id: 'city',
@@ -127,6 +135,7 @@ export const solutions = [
     offer: ['快速抵近观察', '画面取证与回传', '与现有指挥、上报流程衔接'],
     flow: ['确认空域与巡查范围', '按点位或路线观察', '对异常点取证', '回传至指挥或值班', '按单位流程移交处置'],
     scene: 'urban',
+    image: 'assets/img/solutions/city.jpg',
   },
   {
     id: 'custom',
@@ -138,6 +147,7 @@ export const solutions = [
     outcome: '飞机成为现有流程里的一环：谁起飞、拍什么、数据交给谁，事先说清楚。',
     offer: ['场景调研与方案设计', '载荷与流程适配', '培训、演练与售后支持'],
     flow: ['调研场地与任务', '确认载荷与接口', '试飞与作业规范', '培训操作与指挥', '售后与复盘迭代'],
+    image: 'assets/img/solutions/custom.jpg',
     scene: 'link',
   },
 ];
