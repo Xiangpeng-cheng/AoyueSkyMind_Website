@@ -487,8 +487,10 @@
       }
       if (grain) grain.style.setProperty('--py', (y * 0.05 * k) + 'px');
       if (copy) {
-        copy.style.setProperty('--py', (-leave * 72 * k) + 'px');
-        copy.style.setProperty('--po', String(1 - leave * 1.05));
+        var fade = clamp(1 - leave * 1.55, 0, 1);
+        copy.style.setProperty('--py', (-leave * 110 * k) + 'px');
+        copy.style.setProperty('--po', String(fade));
+        copy.style.pointerEvents = fade < 0.18 ? 'none' : '';
       }
       if (visual) {
         visual.style.setProperty('--mx', (mx * 16) + 'px');

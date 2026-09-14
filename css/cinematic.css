@@ -21,6 +21,7 @@ html { scroll-behavior: smooth; }
   flex-direction: column;
   justify-content: stretch;
   padding: 0 !important;
+  overflow: hidden;
 }
 .hero-grid {
   flex: 1;
@@ -158,6 +159,7 @@ img {
   display: flex;
   align-items: center;
   padding: 108px 0 72px;
+  overflow: hidden;
 }
 .hero .aurora,
 .page-hero .aurora {
