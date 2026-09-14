@@ -17,6 +17,13 @@
 (function () {
   'use strict';
 
+  /* GitHub Pages 无法在后台勾选 Enforce HTTPS 时，用脚本把正式域名跳到 HTTPS。
+     仅对 aoyueskymind.com 生效，避免打断本地 file:// 预览。 */
+  if (location.protocol === 'http:' && /(^|\.)aoyueskymind\.com$/i.test(location.hostname)) {
+    location.replace('https://' + location.host + location.pathname + location.search + location.hash);
+    return;
+  }
+
   /* ============================================================
    *  utils/dom
    * ============================================================ */
