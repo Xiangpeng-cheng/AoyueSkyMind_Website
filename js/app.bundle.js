@@ -154,7 +154,7 @@
     shortName: '武汉翱越智控',
     brand: 'Aoyue SkyMind',
     tagline: '以工业无人机与行业方案，为低空现场提供可落地的作业能力',
-    email: 'contact@aoyue-uav.com',
+    phone: '13195446797',
     hours: '周一至周五 09:00 - 18:00',
     qualification: '公司具备质量管理体系认证及行业相关资质（具体资质以官网公示与登记机关信息为准）',
   };
@@ -802,7 +802,7 @@
       contactPoint: [{
         '@type': 'ContactPoint',
         contactType: 'sales',
-        email: company.email,
+        telephone: company.phone,
         availableLanguage: ['zh-Hans'],
       }],
     };

@@ -23,7 +23,7 @@ export function injectStructuredData() {
     contactPoint: [{
       '@type': 'ContactPoint',
       contactType: 'sales',
-      email: company.email,
+      telephone: company.phone,
       availableLanguage: ['zh-Hans'],
     }],
   };
