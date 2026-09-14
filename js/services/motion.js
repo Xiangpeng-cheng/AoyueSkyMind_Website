@@ -66,12 +66,14 @@ export function setupMotion() {
     if (grain) {
       grain.style.setProperty('--py', (y * 0.05 * k) + 'px');
     }
-      if (copy) {
-        const fade = clamp(1 - leave * 1.55, 0, 1);
-        copy.style.setProperty('--py', (-leave * 110 * k) + 'px');
-        copy.style.setProperty('--po', String(fade));
-        copy.style.pointerEvents = fade < 0.18 ? 'none' : '';
-      }
+    if (copy) {
+      const rect = copy.getBoundingClientRect();
+      const leaveCopy = clamp((96 - rect.top) / Math.max(rect.height * 0.5, 140), 0, 1);
+      const fade = 1 - leaveCopy;
+      copy.style.setProperty('--py', (-leaveCopy * 48 * k) + 'px');
+      copy.style.setProperty('--po', String(fade));
+      copy.style.pointerEvents = fade < 0.18 ? 'none' : '';
+    }
     if (visual) {
       visual.style.setProperty('--mx', (mx * 16) + 'px');
       visual.style.setProperty('--my', (my * 10 + leave * 48 * k) + 'px');
