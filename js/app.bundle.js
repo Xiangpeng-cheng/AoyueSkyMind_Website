@@ -153,7 +153,7 @@
     name: '武汉翱越智控科技有限公司',
     shortName: '武汉翱越智控',
     brand: 'Aoyue SkyMind',
-    tagline: '以工业无人机与行业方案，为低空现场提供可落地的作业能力',
+    tagline: '无人机整系统与核心环节研发定制，把行业方案做到现场能飞、能交接',
     phone: '13195446797',
     hours: '周一至周五 09:00 - 18:00',
     qualification: '公司具备质量管理体系认证及行业相关资质（具体资质以官网公示与登记机关信息为准）',
@@ -167,12 +167,13 @@
     '林业与生态保护机构',
     '城市治理与园区运营方',
     '高校与科研院所',
+    '物资转运与园区物流相关单位',
     '系统集成与生态合作伙伴',
   ];
 
   var products = [
-    { id: 'catapult', name: '弹射四旋翼', tag: '弹射起飞、四旋翼机动，面向巡检、侦察与应急快速部署', cat: '工业无人机', scene: 'catapult' },
-    { name: '后续型号', tag: '将按巡检、侦察、勘察等任务继续补充作业平台，产品中心会同步更新。', cat: '即将发布', scene: 'link', comingSoon: true },
+    { id: 'catapult', name: '弹射四旋翼', tag: '弹射起飞、四旋翼机动，面向巡检、应急与勘察等需要快速展开的现场', cat: '工业无人机', scene: 'catapult' },
+    { id: 'custom-rd', name: '整机与子系统定制', tag: '总体、飞控、地面站与载荷可按任务单项或全案承接，不把通用目录直接塞给现场', cat: '定制研发', scene: 'link' },
   ];
 
   var shoton = [
@@ -180,6 +181,7 @@
     { title: '应急现场抵近侦察', tag: '快速到位 · 实时回传', scene: 'rescue', image: 'assets/img/solutions/rescue.jpg', desc: '灾害或突发事件往往没有跑道。车载或岸边弹射后，尽快给出一线视角，供指挥判断进出路线与风险点。' },
     { title: '复杂地形空中勘察', tag: '无跑道起降 · 定点悬停', scene: 'city', image: 'assets/img/solutions/survey.jpg', desc: '补测、选址与工点勘察时，用定点观察和航带采集补齐地面走不到、看不全的位置，并与后续建模流程衔接。' },
     { title: '农林区域巡查作业', tag: '网格航线 · 态势感知', scene: 'farm', image: 'assets/img/solutions/agri.jpg', desc: '按网格巡查林区、农田与保护区，结合可见光与红外，发现火情、异常长势或边界变化，留下可追溯记录。' },
+    { title: '园区与跨障物资转运', tag: '按任务选配平台 · 合规空域', scene: 'urban', image: 'assets/img/solutions/city.jpg', desc: '封闭园区、岛屿或路网不便处，用合适的飞行平台做短途物资转运试验与方案设计，先对齐空域、起降点和交接流程。' },
   ];
 
   var solutions = [
@@ -188,14 +190,15 @@
     { id: 'survey', title: '测绘勘察方案', cat: '测绘', summary: '面向区域勘察与补测，提供空中取证、影像采集，并与后续建模、内业流程对接。', offer: ['无跑道场地灵活起飞', '定点、航带采集', '数据导出与建模流程对接'], scene: 'city', image: 'assets/img/solutions/survey.jpg' },
     { id: 'agri', title: '农林巡查方案', cat: '农林', summary: '用于林区、农田与保护区的常态巡查，发现火情、病虫害迹象或边界异常，并留下可追溯记录。', offer: ['网格化航线巡查', '红外辅助识别热点', '巡查记录可追溯'], scene: 'forest', image: 'assets/img/solutions/agri.jpg' },
     { id: 'city', title: '城市治理方案', cat: '城市', summary: '服务园区、工地与市政巡查，完成高处观察、违建线索与现场取证，并接入现有指挥流程。', offer: ['快速抵近观察', '画面取证与回传', '与现有指挥、上报流程衔接'], scene: 'urban', image: 'assets/img/solutions/city.jpg' },
-    { id: 'custom', title: '定制行业方案', cat: '集成', summary: '按您的场地、载荷与指挥流程，把合适的飞行平台嵌进现有作业体系，而不是另给一套空泛目录。', offer: ['场景调研与方案设计', '载荷与流程适配', '培训、演练与售后支持'], scene: 'link', image: 'assets/img/solutions/custom.jpg' },
+    { id: 'logistics', title: '物资转运方案', cat: '物流', summary: '面向园区、岛屿和路网不便的短途投送，按空域与起降条件选配平台，把转运嵌进现有仓储或值班流程。', offer: ['空域与起降点评估', '按货物与航程匹配平台', '与仓储、值班交接流程衔接'], scene: 'urban', image: 'assets/img/solutions/city.jpg' },
+    { id: 'custom', title: '定制研发方案', cat: '研发', summary: '按任务承接整机、飞控、地面站或载荷适配，可单项也可全案，把飞机和软件嵌进现有作业体系。', offer: ['整机或总体方案论证', '飞控、地面站与通信定制', '仿真验证、试飞与培训售后'], scene: 'link', image: 'assets/img/solutions/custom.jpg' },
   ];
 
   var payloads = [
-    { title: '快速部署', desc: '按场地选择起飞方式。受限场地可用弹射等手段展开，不把机场当成先决条件。' },
-    { title: '机动作业', desc: '悬停、绕飞、抵近，适合杆塔、现场和点状目标，而不是一掠而过的航线飞越。' },
-    { title: '行业载荷', desc: '按任务挂载可见光、红外等巡视侦察载荷，先对齐“要看清什么”，再决定挂什么。' },
-    { title: '方案交付', desc: '航线、作业规范、培训与售后按场景整包，避免只交一台飞机、现场不会用。' },
+    { title: '整机与总体', desc: '按任务做气动布局、总体约束和整机架构。多旋翼、复合翼等布局按场地选择，不预先规定必须是哪一种机型。' },
+    { title: '飞控与地面站', desc: '飞控算法、地面站软件与通信按任务适配，可随整机交付，也可作为子系统单独承接。' },
+    { title: '仿真与试飞', desc: '总体参数与飞行动力学先在仿真里迭代，再在真实场地试飞修正，避免只交图纸。' },
+    { title: '方案与培训', desc: '航线、作业规范、培训与售后按场景整包，避免只交一台飞机、现场不会用。' },
   ];
 
   var navSections = ['home', 'solutions', 'products', 'about', 'contact'];
