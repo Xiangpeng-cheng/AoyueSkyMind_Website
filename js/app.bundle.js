@@ -172,7 +172,7 @@
   ];
 
   var products = [
-    { id: 'aoyue-fc', name: 'Aoyue SkyMind 飞控', tag: '新一代模块化飞行控制器，面向多旋翼、复合翼与行业自主飞行平台。产品参数与上市时间敬请期待。', cat: '飞行控制器', scene: 'fc', comingSoon: true },
+    { id: 'aoyue-fc', name: 'Aoyue SkyMind 飞控', tag: 'FMU v6X Mini 架构 · 30.5×30.5 mm 栈距 · 三冗余 IMU · 7–26 V 供电。硬件规格已公开，正式上市敬请期待。', cat: '飞行控制器', scene: 'fc', comingSoon: true },
   ];
 
   var shoton = [
@@ -649,23 +649,22 @@
     root.innerHTML = products.map(function (p) {
       var hash = p.id ? '#' + p.id : '';
       var soon = !!p.comingSoon;
-      var tag = soon ? '敬请期待' : '了解详情';
-      var open = soon
-        ? '<article class="product-card is-soon">'
-        : '<a class="product-card' + (products.length === 1 ? ' product-feature' : '') + '" href="' + base + hash + '">';
-      var close = soon ? '</article>' : '</a>';
+      var tag = soon ? '查看规格' : '了解详情';
+      var cardClass = 'product-card' + (products.length === 1 ? ' product-feature' : '') + (soon ? ' is-soon is-spec-preview' : '');
+      var open = '<a class="' + cardClass + '" href="' + base + hash + '">';
+      var close = '</a>';
       return [
         open,
         '  <div class="media' + (p.image ? ' is-photo' : '') + '">',
         '    <img src="' + coverSrc(p) + '" alt="' + esc(p.name) + '" width="800" height="500" loading="lazy" decoding="async" />',
-        '    <span class="card-tag">' + esc(soon ? '敬请期待' : p.cat) + '</span>',
+        '    <span class="card-tag">' + esc(soon ? '规格预览' : p.cat) + '</span>',
         '  </div>',
         '  <div class="body">',
         '    <div>',
         '      <div class="name">' + esc(p.name) + '</div>',
         '      <div class="tag">' + esc(p.tag) + '</div>',
         '    </div>',
-        '    <div class="footer"><span>' + tag + '</span>' + (soon ? '' : '<span class="arrow">' + ARROW_SVG + '</span>') + '</div>',
+        '    <div class="footer"><span>' + tag + '</span><span class="arrow">' + ARROW_SVG + '</span></div>',
         '  </div>',
         close,
       ].join('');

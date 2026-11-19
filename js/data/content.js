@@ -28,12 +28,49 @@ export const products = [
   {
     id: 'aoyue-fc',
     name: 'Aoyue SkyMind 飞控',
-    tag: '新一代模块化飞行控制器，面向多旋翼、复合翼与行业自主飞行平台。产品参数与上市时间敬请期待。',
+    tag: 'FMU v6X Mini 架构 · 30.5×30.5 mm 栈距 · 三冗余 IMU · 7–26 V 供电。硬件规格已公开，正式上市敬请期待。',
     cat: '飞行控制器',
     scene: 'fc',
     comingSoon: true,
   },
 ];
+
+/** 飞控硬件规格（与 PX4_V6X_MINI 原理图一致，供产品页引用） */
+export const flightController = {
+  id: 'aoyue-fc',
+  name: 'Aoyue SkyMind 飞控',
+  subtitle: 'FMU v6X Mini 级飞行管理单元',
+  mount: '30.5 × 30.5 mm（M3 栈距）',
+  status: '规格预览 · 正式上市敬请期待',
+  mcu: 'STM32H753IIK6 · ARM Cortex-M7 @ 480 MHz',
+  highlights: [
+    { title: '三冗余 IMU', desc: '三颗 TDK ICM-45686 六轴 IMU，支持冗余投票与失效切换，面向高动态行业机姿态解算。' },
+    { title: '多源气压 + 磁力', desc: 'ICP-20100 与 BMP388 双路气压，搭配 BMM150 三轴磁力计，地磁与高度信息互为补充。' },
+    { title: 'IMU 恒温加热', desc: '板载加热网络（HEATER），降低低温零偏漂移，原理图按加热电阻置于 IMU 中心区域布局。' },
+    { title: '宽压输入 7–26 V', desc: 'MP9943 降压至 5 V，LM74700 理想二极管与多路 LP5907/AP2112 低噪声 LDO，分电源域供电传感器与逻辑。' },
+    { title: '电池与 USB 共存', desc: 'Type-C（USBLC6 保护）支持 VBUS；电池与 USB 可同时接入，D+/D− 直连，无动力电也可地面调参。' },
+    { title: '8 路 PWM / DShot', desc: 'ESC 10P（CH1–4）+ PWM5（CH5–8），串 120 Ω 端接，含电调遥测 USART2；无 PX4IO，输出由主 MCU 直驱。' },
+    { title: '丰富外设接口', desc: 'USART1 GPS1、UART7 TELEM1、UART5 TELEM2、USART3 DEBUG、UART4、USART6 RC_IN、CAN1、I2C1/I2C2。' },
+    { title: '参数与日志存储', desc: '24LC64 EEPROM、FM25V02A FRAM 与 TF 卡座，支持校准数据、参数与非易失日志扩展。' },
+  ],
+  specs: [
+    { k: '产品状态', v: '规格预览 · 敬请期待' },
+    { k: '安装尺寸', v: '30.5 × 30.5 mm（M3）' },
+    { k: '主控', v: 'STM32H753IIK6 · Cortex-M7 480 MHz' },
+    { k: '架构', v: 'FMU v6X Mini（无 PX4IO）' },
+    { k: 'IMU', v: 'ICM-45686 × 3（±32 g，6 轴）' },
+    { k: '气压', v: 'ICP-20100 + BMP388' },
+    { k: '磁力计', v: 'BMM150' },
+    { k: '输入电压', v: '7 – 26 V（VIN）' },
+    { k: 'USB', v: 'Type-C · USB 2.0 通讯' },
+    { k: 'PWM 输出', v: '8 路（含 DShot 电调接口）' },
+    { k: '串口', v: 'GPS / 双路数传 / DEBUG / RC / ESC 遥测' },
+    { k: '总线', v: 'CAN1 · I2C1 / I2C2' },
+    { k: '存储', v: 'EEPROM + FRAM + microSD' },
+    { k: '时钟', v: '16 MHz HSE · 32.768 kHz LSE' },
+    { k: '固件生态', v: '兼容 PX4 / ArduPilot 类 FMU v6X 栈（以发布说明为准）' },
+  ],
+};
 
 export const shoton = [
   {

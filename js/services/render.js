@@ -47,23 +47,25 @@ export function renderProducts() {
   root.innerHTML = products.map(function (p) {
     const hash = p.id ? '#' + p.id : '';
     const soon = !!p.comingSoon;
-    const tag = soon ? '敬请期待' : '了解详情';
-    const open = soon
-      ? '<article class="product-card is-soon">'
-      : '<a class="product-card' + (products.length === 1 ? ' product-feature' : '') + '" href="' + base + hash + '">';
-    const close = soon ? '</article>' : '</a>';
+    const tag = soon ? '查看规格' : '了解详情';
+    const cardClass =
+      'product-card' +
+      (products.length === 1 ? ' product-feature' : '') +
+      (soon ? ' is-soon is-spec-preview' : '');
+    const open = '<a class="' + cardClass + '" href="' + base + hash + '">';
+    const close = '</a>';
     return [
       open,
       '  <div class="media' + (p.image ? ' is-photo' : '') + '">',
       '    <img src="' + coverSrc(p) + '" alt="' + esc(p.name) + '" width="800" height="500" loading="lazy" decoding="async" />',
-      '    <span class="card-tag">' + esc(soon ? '敬请期待' : p.cat) + '</span>',
+      '    <span class="card-tag">' + esc(soon ? '规格预览' : p.cat) + '</span>',
       '  </div>',
       '  <div class="body">',
       '    <div>',
       '      <div class="name">' + esc(p.name) + '</div>',
       '      <div class="tag">' + esc(p.tag) + '</div>',
       '    </div>',
-      '    <div class="footer"><span>' + tag + '</span>' + (soon ? '' : '<span class="arrow">' + ARROW_SVG + '</span>') + '</div>',
+      '    <div class="footer"><span>' + tag + '</span><span class="arrow">' + ARROW_SVG + '</span></div>',
       '  </div>',
       close,
     ].join('');

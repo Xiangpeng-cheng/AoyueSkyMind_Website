@@ -358,6 +358,14 @@ img {
   border-color: rgba(0, 212, 255, 0.22);
   box-shadow: 0 24px 56px -32px rgba(0, 212, 255, 0.35);
 }
+.product-card.is-soon.is-spec-preview {
+  cursor: pointer;
+  pointer-events: auto;
+}
+.product-card.is-soon.is-spec-preview .media::after {
+  content: '规格预览';
+  letter-spacing: 0.28em;
+}
 .product-card.is-soon .footer span {
   font-size: 15px;
   letter-spacing: 0.35em;

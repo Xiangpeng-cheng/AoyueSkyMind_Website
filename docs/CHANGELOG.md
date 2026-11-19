@@ -5,6 +5,10 @@
 
 ## [Unreleased]
 
+### Added
+- 产品页公开 Aoyue SkyMind 飞控完整硬件规格（依据 PX4_V6X_MINI 原理图）：30.5×30.5 mm 栈距、三冗余 ICM-45686、7–26 V、接口与存储等；首页同步规格概要与 SEO 文案。
+- `js/data/content.js` 增加 `flightController` 结构化数据供后续页面渲染复用。
+
 ### Changed（重构）
 - 将单文件 `app.js` (22 KB) 拆分为 `js/utils/*`、`js/data/*`、`js/security/*`、`js/services/*`、`js/main.js`，总计 17 个模块，平均每个 ≤ 100 行。
 - 将内联 CSS（≈ 8 KB）拆分为 `css/tokens.css`、`css/base.css`、`css/layout.css`、`css/components.css`、`css/sections.css`。
