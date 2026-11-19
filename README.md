@@ -72,6 +72,16 @@ package.json             元信息（scripts 仅作指引）
 - [docs/CONTENT-AUDIT.md](docs/CONTENT-AUDIT.md) — 内容审核
 - [docs/CHANGELOG.md](docs/CHANGELOG.md) — 变更日志
 
+## 网页动效与 UI 参考（站内改版时可查阅）
+
+本站 `css/cinematic.css`、`js/services/motion.js`、`js/services/reveal.js` 等动效实现，迭代时可对照下列资料库——优先 **原生 CSS/JS**、**克制时长（约 150–400ms）**、**`prefers-reduced-motion` 降级**，避免过度视差影响性能与可读性。
+
+| 名称 | 链接 | 说明 |
+| --- | --- | --- |
+| ShowMotion | https://showmotion.bohehub.com/zh-hans/ | 中文动效案例与实现思路参考 |
+| Motion Lab | https://motionlab.uanx.online/lab | 动效实验与交互模式参考 |
+| Web Motion Showcase | https://holynova.github.io/web-motion-showcase/?lang=zh&theme=slate&mode=light | 经典与现代网页动效合集，含 AI 提示词与 a11y 说明 |
+
 ## 相关链接
 - [腾讯云（中国站）](https://cloud.tencent.com/) — **务必使用中国站**；国际站（`tencentcloud.com`）会把站点资源部署到境外
 - [边缘安全加速平台 EO](https://cloud.tencent.com/product/teo) — 站点接入、加速与安全防护使用 EO 服务

@@ -47,7 +47,7 @@ export function renderProducts() {
   root.innerHTML = products.map(function (p) {
     const hash = p.id ? '#' + p.id : '';
     const soon = !!p.comingSoon;
-    const tag = soon ? '即将发布' : '了解详情';
+    const tag = soon ? '敬请期待' : '了解详情';
     const open = soon
       ? '<article class="product-card is-soon">'
       : '<a class="product-card' + (products.length === 1 ? ' product-feature' : '') + '" href="' + base + hash + '">';
@@ -56,7 +56,7 @@ export function renderProducts() {
       open,
       '  <div class="media' + (p.image ? ' is-photo' : '') + '">',
       '    <img src="' + coverSrc(p) + '" alt="' + esc(p.name) + '" width="800" height="500" loading="lazy" decoding="async" />',
-      '    <span class="card-tag">' + esc(p.cat) + '</span>',
+      '    <span class="card-tag">' + esc(soon ? '敬请期待' : p.cat) + '</span>',
       '  </div>',
       '  <div class="body">',
       '    <div>',

@@ -153,52 +153,51 @@
     name: '武汉翱越智控科技有限公司',
     shortName: '武汉翱越智控',
     brand: 'Aoyue SkyMind',
-    tagline: '无人机整系统与核心环节研发定制，把行业方案做到现场能飞、能交接',
+    tagline: '专注无人机飞控与航电系统研发，为行业机与集成伙伴提供可靠、可扩展的飞行控制平台',
     phone: '13195446797',
     hours: '周一至周五 09:00 - 18:00',
     qualification: '公司具备质量管理体系认证及行业相关资质（具体资质以官网公示与登记机关信息为准）',
   };
 
   var partners = [
+    '无人机整机与集成厂商',
     '电力能源行业用户',
     '地理信息与测绘单位',
     '应急管理领域客户',
-    '现代化农业生产企业',
-    '林业与生态保护机构',
-    '城市治理与园区运营方',
     '高校与科研院所',
-    '物资转运与园区物流相关单位',
-    '系统集成与生态合作伙伴',
+    '开源飞控生态伙伴',
+    '行业解决方案开发商',
+    '测试验证与仿真平台',
+    '系统集成与渠道伙伴',
   ];
 
   var products = [
-    { id: 'catapult', name: '弹射四旋翼', tag: '弹射起飞、四旋翼机动，面向巡检、应急与勘察等需要快速展开的现场', cat: '工业无人机', scene: 'catapult' },
-    { id: 'custom-rd', name: '整机与子系统定制', tag: '总体、飞控、地面站与载荷可按任务单项或全案承接，不把通用目录直接塞给现场', cat: '定制研发', scene: 'link' },
+    { id: 'aoyue-fc', name: 'Aoyue SkyMind 飞控', tag: '新一代模块化飞行控制器，面向多旋翼、复合翼与行业自主飞行平台。产品参数与上市时间敬请期待。', cat: '飞行控制器', scene: 'fc', comingSoon: true },
   ];
 
   var shoton = [
-    { title: '走廊与杆塔快速巡检', tag: '弹射部署 · 可见光 / 红外', scene: 'power', image: 'assets/img/solutions/power.jpg', desc: '在山地廊道或杆塔周边展开：弹射升空后绕飞、悬停，把通道、金具与发热点拍清楚，再带回可复核的影像。' },
-    { title: '应急现场抵近侦察', tag: '快速到位 · 实时回传', scene: 'rescue', image: 'assets/img/solutions/rescue.jpg', desc: '灾害或突发事件往往没有跑道。车载或岸边弹射后，尽快给出一线视角，供指挥判断进出路线与风险点。' },
-    { title: '复杂地形空中勘察', tag: '无跑道起降 · 定点悬停', scene: 'city', image: 'assets/img/solutions/survey.jpg', desc: '补测、选址与工点勘察时，用定点观察和航带采集补齐地面走不到、看不全的位置，并与后续建模流程衔接。' },
+    { title: '走廊与杆塔快速巡检', tag: '精准定位 · 可见光 / 红外', scene: 'power', image: 'assets/img/solutions/power.jpg', desc: '在山地廊道或杆塔周边快速起飞：绕飞、悬停，把通道、金具与发热点拍清楚，再带回可复核的影像。' },
+    { title: '应急现场抵近侦察', tag: '快速到位 · 实时回传', scene: 'rescue', image: 'assets/img/solutions/rescue.jpg', desc: '灾害或突发事件现场尽快建立空中视角，供指挥判断进出路线与风险点，画面可稳定回传。' },
+    { title: '复杂地形空中勘察', tag: '灵活起降 · 定点悬停', scene: 'city', image: 'assets/img/solutions/survey.jpg', desc: '补测、选址与工点勘察时，用定点观察和航带采集补齐地面走不到、看不全的位置，并与后续建模流程衔接。' },
     { title: '农林区域巡查作业', tag: '网格航线 · 态势感知', scene: 'farm', image: 'assets/img/solutions/agri.jpg', desc: '按网格巡查林区、农田与保护区，结合可见光与红外，发现火情、异常长势或边界变化，留下可追溯记录。' },
-    { title: '园区与跨障物资转运', tag: '按任务选配平台 · 合规空域', scene: 'urban', image: 'assets/img/solutions/city.jpg', desc: '封闭园区、岛屿或路网不便处，用合适的飞行平台做短途物资转运试验与方案设计，先对齐空域、起降点和交接流程。' },
+    { title: '行业机平台集成验证', tag: '飞控适配 · 联调试飞', scene: 'urban', image: 'assets/img/solutions/city.jpg', desc: '面向整机伙伴与集成项目：飞控、地面站与通信按机型与任务联调，完成试飞验证与作业规范交接。' },
   ];
 
   var solutions = [
-    { id: 'power', title: '电力巡检方案', cat: '能源', summary: '针对廊道、杆塔与金具巡视，把弹射起飞、抵近拍摄和缺陷复核串成一次可执行的现场作业。', offer: ['山地、岸边、车载等受限场地可弹射部署', '可见光 / 红外载荷巡视', '航线规划、分段作业与成果整理支持'], scene: 'power', image: 'assets/img/solutions/power.jpg' },
-    { id: 'rescue', title: '应急侦察方案', cat: '应急', summary: '突发事件现场快速升空，完成态势侦察与画面回传，给指挥一个能看的一线视角。', offer: ['无需跑道，强调展开速度', '悬停观察与绕飞勘察', '与现场指挥协同的作业建议'], scene: 'rescue', image: 'assets/img/solutions/rescue.jpg' },
+    { id: 'power', title: '电力巡检方案', cat: '能源', summary: '针对廊道、杆塔与金具巡视，把快速起飞、抵近拍摄和缺陷复核串成一次可执行的现场作业。', offer: ['山地、岸边、车载等受限场地快速部署', '可见光 / 红外载荷巡视', '航线规划、分段作业与成果整理支持'], scene: 'power', image: 'assets/img/solutions/power.jpg' },
+    { id: 'rescue', title: '应急侦察方案', cat: '应急', summary: '突发事件现场快速升空，完成态势侦察与画面回传，给指挥一个能看的一线视角。', offer: ['强调展开速度与首飞时间', '悬停观察与绕飞勘察', '与现场指挥协同的作业建议'], scene: 'rescue', image: 'assets/img/solutions/rescue.jpg' },
     { id: 'survey', title: '测绘勘察方案', cat: '测绘', summary: '面向区域勘察与补测，提供空中取证、影像采集，并与后续建模、内业流程对接。', offer: ['无跑道场地灵活起飞', '定点、航带采集', '数据导出与建模流程对接'], scene: 'city', image: 'assets/img/solutions/survey.jpg' },
     { id: 'agri', title: '农林巡查方案', cat: '农林', summary: '用于林区、农田与保护区的常态巡查，发现火情、病虫害迹象或边界异常，并留下可追溯记录。', offer: ['网格化航线巡查', '红外辅助识别热点', '巡查记录可追溯'], scene: 'forest', image: 'assets/img/solutions/agri.jpg' },
     { id: 'city', title: '城市治理方案', cat: '城市', summary: '服务园区、工地与市政巡查，完成高处观察、违建线索与现场取证，并接入现有指挥流程。', offer: ['快速抵近观察', '画面取证与回传', '与现有指挥、上报流程衔接'], scene: 'urban', image: 'assets/img/solutions/city.jpg' },
     { id: 'logistics', title: '物资转运方案', cat: '物流', summary: '面向园区、岛屿和路网不便的短途投送，按空域与起降条件选配平台，把转运嵌进现有仓储或值班流程。', offer: ['空域与起降点评估', '按货物与航程匹配平台', '与仓储、值班交接流程衔接'], scene: 'urban', image: 'assets/img/solutions/city.jpg' },
-    { id: 'custom', title: '定制研发方案', cat: '研发', summary: '按任务承接整机、飞控、地面站或载荷适配，可单项也可全案，把飞机和软件嵌进现有作业体系。', offer: ['整机或总体方案论证', '飞控、地面站与通信定制', '仿真验证、试飞与培训售后'], scene: 'link', image: 'assets/img/solutions/custom.jpg' },
+    { id: 'custom', title: '定制研发方案', cat: '研发', summary: '按任务承接飞控硬件、地面站或整机集成验证，可单项也可全案，把航电与软件嵌进现有作业体系。', offer: ['飞控与航电子系统论证', '地面站与通信定制', '仿真验证、试飞与培训售后'], scene: 'link', image: 'assets/img/solutions/custom.jpg' },
   ];
 
   var payloads = [
-    { title: '整机与总体', desc: '按任务做气动布局、总体约束和整机架构。多旋翼、复合翼等布局按场地选择，不预先规定必须是哪一种机型。' },
-    { title: '飞控与地面站', desc: '飞控算法、地面站软件与通信按任务适配，可随整机交付，也可作为子系统单独承接。' },
-    { title: '仿真与试飞', desc: '总体参数与飞行动力学先在仿真里迭代，再在真实场地试飞修正，避免只交图纸。' },
-    { title: '方案与培训', desc: '航线、作业规范、培训与售后按场景整包，避免只交一台飞机、现场不会用。' },
+    { title: '飞行控制器', desc: '面向多旋翼、复合翼与特种布局的模块化飞控硬件，强调可靠供电、冗余传感器域与行业机级的接口扩展。' },
+    { title: '传感器与定位', desc: 'IMU、GNSS / RTK 与必要的外设接入按机型配置，为自主飞行与高精度作业提供数据基础。' },
+    { title: '地面站与数传', desc: '地面站软件、链路与地面端协同按任务定制，可对接常见开源栈或客户自有指挥系统。' },
+    { title: '集成与定制', desc: '为整机伙伴提供飞控选型、联调试飞、参数整定与作业规范，避免只交板卡、现场不会用。' },
   ];
 
   var navSections = ['home', 'solutions', 'products', 'about', 'contact'];
@@ -650,7 +649,7 @@
     root.innerHTML = products.map(function (p) {
       var hash = p.id ? '#' + p.id : '';
       var soon = !!p.comingSoon;
-      var tag = soon ? '即将发布' : '了解详情';
+      var tag = soon ? '敬请期待' : '了解详情';
       var open = soon
         ? '<article class="product-card is-soon">'
         : '<a class="product-card' + (products.length === 1 ? ' product-feature' : '') + '" href="' + base + hash + '">';
@@ -659,7 +658,7 @@
         open,
         '  <div class="media' + (p.image ? ' is-photo' : '') + '">',
         '    <img src="' + coverSrc(p) + '" alt="' + esc(p.name) + '" width="800" height="500" loading="lazy" decoding="async" />',
-        '    <span class="card-tag">' + esc(p.cat) + '</span>',
+        '    <span class="card-tag">' + esc(soon ? '敬请期待' : p.cat) + '</span>',
         '  </div>',
         '  <div class="body">',
         '    <div>',
