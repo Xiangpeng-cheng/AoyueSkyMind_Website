@@ -5,14 +5,18 @@
 ## 当前结构
 ```
 assets/
+├─ icons/          站点图标位图（favicon / apple-touch-icon，见 icons/README.md）
+├─ img/            方案与产品位图
 └─ svg/
-   ├─ logo.svg     公司 Logo（favicon、apple-touch-icon、导航、页脚）
+   ├─ Aoyue_logo_icon_blue.svg  图标矢量源（导出 icons/ 内位图）
+   ├─ Aoyue_logo_blue.svg       横版字标（页脚等）
    └─ hero.svg     首页主视觉插画（已 preload + fetchpriority=high）
 ```
 
 ## 分类原则
 | 类别 | 路径 | 说明 |
 | --- | --- | --- |
+| 站点图标（favicon） | `assets/icons/` | 自 SVG 导出的 ICO / PNG，[说明](icons/README.md) |
 | SVG（图标 / 插画） | `assets/svg/` | 矢量、可直接 `fetchpriority="high"` 预加载 |
 | 产品图 | `assets/images/products/` | 待补：产品大图（建议 WebP，宽度 ≥ 1280） |
 | 真实作业影像 | `assets/images/shoton/` | 待补：Shot on Aoyue 视频帧 / 图片 |
